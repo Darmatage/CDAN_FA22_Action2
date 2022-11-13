@@ -41,9 +41,9 @@ public class GameHandler : MonoBehaviour {
                   if (playerHealth >=0){
                         updateStatsDisplay();
                   }
-                  //if (damage > 0){
-                       // player.GetComponent<PlayerHurt>().playerHit();       //play GetHit animation
-                 // }
+                  if (damage > 0){
+                        player.GetComponent<PlayerHurt>().playerHit();       //play GetHit animation
+                  }
             }
 
            if (playerHealth > StartPlayerHealth){
@@ -72,8 +72,7 @@ public class GameHandler : MonoBehaviour {
       }
 
       IEnumerator DeathPause(){
-            player.GetComponent<PlayerMove>().isAlive = false;
-            player.GetComponent<PlayerJump>().isAlive = false;
+            player.GetComponent<PlayerMoveAround>().isAlive = false;
             yield return new WaitForSeconds(1.0f);
             SceneManager.LoadScene("EndLose");
       }
