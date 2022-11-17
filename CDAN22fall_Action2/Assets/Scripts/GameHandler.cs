@@ -21,6 +21,12 @@ public class GameHandler : MonoBehaviour {
 
       private string sceneName;
 
+// puzzle variables:
+      public static bool escapedRoom1;
+      public static bool hasFoundPaper;
+      public static bool hasFoundKey;
+      public static bool hasFoundLadder;
+
       void Start(){
             player = GameObject.FindWithTag("Player");
             sceneName = SceneManager.GetActiveScene().name;
@@ -78,7 +84,7 @@ public class GameHandler : MonoBehaviour {
       }
 
       public void StartGame() {
-            SceneManager.LoadScene("Level1");
+            SceneManager.LoadScene("Level1Bedroom");
       }
 
       public void RestartGame() {

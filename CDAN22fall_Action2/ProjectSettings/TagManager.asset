@@ -7,6 +7,8 @@ TagManager:
   - PauseMenu
   - PauseMenuSlider
   - GameHandler
+  - ButtonTriggerManager
+  - InteractiveComponent
   layers:
   - Default
   - TransparentFX
