@@ -5,31 +5,26 @@ using UnityEngine;
 public class PickUp : MonoBehaviour{
 
       public GameHandler gameHandler;
+      public GameObject TextBox;
       //public playerVFX playerPowerupVFX;
-      public bool isHealthPickUp = true;
-      public bool isSpeedBoostPickUp = false;
-
-      public int healthBoost = 50;
-      public float speedBoost = 2f;
-      public float speedTime = 2f;
+      public bool hasFoundKey;
 
       void Start(){
             gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
             //playerPowerupVFX = GameObject.FindWithTag("Player").GetComponent<playerVFX>();
+            hasFoundKey=false;
       }
 
       public void OnTriggerEnter2D (Collider2D other){
             if (other.gameObject.tag == "Player"){
                   GetComponent<Collider2D>().enabled = false;
-                  GetComponent<AudioSource>().Play();
                   StartCoroutine(DestroyThis());
 
-                  if (isHealthPickUp == true) {
-                        gameHandler.playerGetHit(healthBoost * -1);
-                        //playerPowerupVFX.powerup();
+                  if (hasFoundKey == true) {
+                      TextBox.SetActive(true);
+                      hasFoundKey=true;
                   }
 
-                  
             }
       }
 
