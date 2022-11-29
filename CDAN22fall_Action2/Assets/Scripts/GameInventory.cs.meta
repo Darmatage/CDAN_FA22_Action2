@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:CDAN22fall_Action2/Assets/Scenes/Scripts/GameInventory.cs.meta
 guid: 2e45a7c15621b2d4c972ea24e42d021e
+=======
+guid: 2c35c96610138704a957277aa85dd245
+>>>>>>> 2f1081769f1b76423f06eaa0acc79d3fc771e952:CDAN22fall_Action2/Assets/Scripts/GameInventory.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
