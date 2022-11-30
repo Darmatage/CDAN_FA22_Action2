@@ -103,4 +103,8 @@ public class GameHandler : MonoBehaviour {
       public void Credits() {
             SceneManager.LoadScene("Credits");
       }
-}
+public static bool gotitem1 = false;
+     public static bool gotitem2 = false;
+     public static bool gotitem3 = false;
+   }
+ 
