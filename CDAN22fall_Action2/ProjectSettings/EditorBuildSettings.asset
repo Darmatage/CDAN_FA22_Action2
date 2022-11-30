@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level3SiblingBedroom.unity
     guid: 3e3ffbe15a76d4b03815b33e9868d221
+  - enabled: 1
+    path: Assets/Scenes/HallwayShop.unity
+    guid: 06375a4e11e7241f1915c8a586c1fd5f
   m_configObjects: {}

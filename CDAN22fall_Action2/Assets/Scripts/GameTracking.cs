@@ -5,6 +5,7 @@ using UnityEngine;
 public class GameTracking : MonoBehaviour{
 
 	//the current room
+	public static bool isHallway=false;
 	public static bool isRoom1=true;
 	public static bool isRoom2=false;
 	public static bool isRoom3=false;
@@ -13,6 +14,7 @@ public class GameTracking : MonoBehaviour{
 	public static bool isRoom6=false;
 	public static bool isRoom7=false;
 
+	public bool isThisHallway=false;
 	public bool isThisRoom1=true;
 	public bool isThisRoom2=false;
 	public bool isThisRoom3=false;
