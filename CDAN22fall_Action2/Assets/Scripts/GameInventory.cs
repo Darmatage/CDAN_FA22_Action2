@@ -3,12 +3,10 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-  // Crafting buttons:
-      public GameObject buttonCraft1; // weapon1 creation
-
-
 public class GameInventory : MonoBehaviour {
       public GameObject InventoryMenu;
+      // Crafting buttons:
+      public GameObject buttonCraft1; // weapon1 creation
       //public GameObject CraftMenu;
       public bool InvIsOpen = false;
 
@@ -51,12 +49,10 @@ public class GameInventory : MonoBehaviour {
 
       void Start(){
             InventoryMenu.SetActive(true);
+            buttonCraft1.SetActive(false);
             //CraftMenu.SetActive(false);
             InventoryDisplay();
-		void Start(){
-            buttonCraft1.SetActive(false);
       }
-
 
       void InventoryDisplay(){
             if (item1bool == true) {item1image.SetActive(true);} else {item1image.SetActive(false);}
@@ -91,7 +87,7 @@ public class GameInventory : MonoBehaviour {
             buttonCraft1.SetActive(true);
       }
       else { buttonCraft1.SetActive(false); }
-      }
+    }
 
       public void InventoryRemove(string item, int num){
             string itemRemove = item;
@@ -165,14 +161,13 @@ public class GameInventory : MonoBehaviour {
             item4num = 0; // name
             item5num = 0; // name
       }
-     
+
 	 public void CraftObject1(){
             InventoryAdd("weapon1"); // sample inventory item to be added, needs supporting UI images
             InventoryRemove("item1", 2); InventoryRemove("item4",1); // sample inventory items to be removed
       }
 //<<<<<<< HEAD:CDAN22fall_Action2/Assets/Scenes/Scripts/GameInventory.cs
-}}
-
+  }
 //=======
 //}
 //>>>>>>> 2f1081769f1b76423f06eaa0acc79d3fc771e952:CDAN22fall_Action2/Assets/Scripts/GameInventory.cs
