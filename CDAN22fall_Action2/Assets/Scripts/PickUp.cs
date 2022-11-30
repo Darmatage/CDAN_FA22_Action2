@@ -7,12 +7,12 @@ public class PickUp : MonoBehaviour{
       public GameHandler gameHandler;
       public GameObject TextBox;
       //public playerVFX playerPowerupVFX;
-      public bool hasFoundKey;
+      public bool hasFoundKey1;
 
       void Start(){
             gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
             //playerPowerupVFX = GameObject.FindWithTag("Player").GetComponent<playerVFX>();
-            hasFoundKey=false;
+            GameTracking.hasFoundKey1=false;
       }
 
       public void OnTriggerEnter2D (Collider2D other){
@@ -20,9 +20,9 @@ public class PickUp : MonoBehaviour{
                   GetComponent<Collider2D>().enabled = false;
                   StartCoroutine(DestroyThis());
 
-                  if (hasFoundKey == true) {
+                  if (GameTracking.hasFoundKey1 == true) {
                       TextBox.SetActive(true);
-                      hasFoundKey=true;
+                      GameTracking.hasFoundKey1=true;
                   }
 
             }
