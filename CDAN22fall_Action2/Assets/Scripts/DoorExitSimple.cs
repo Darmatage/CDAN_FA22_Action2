@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class DoorExitSimple : MonoBehaviour{
 
-    public string NextLevel = "Hallway";
+    public string NextLevel;
 
 
 	public GameObject doorOpen;
@@ -26,6 +26,14 @@ public class DoorExitSimple : MonoBehaviour{
 			}else {canEnter=false;}
 		}
 
+    if (GameTracking.isHallway){
+      canEnter=true;
+      GameTracking.isRoom2=true;
+      GameTracking.isRoom3=true;
+    }else{canEnter=false;
+          GameTracking.isRoom2=false;
+          GameTracking.isRoom3=false;}
+
 		if (GameTracking.isRoom2){
 			if(GameTracking.hasFoundKey2){
 				canEnter=true;
@@ -45,7 +53,7 @@ public class DoorExitSimple : MonoBehaviour{
 
     public void OnTriggerEnter2D(Collider2D other){
         if ((other.gameObject.tag == "Player")&&(canEnter)){
-            SceneManager.LoadScene ("Hallway");
+            SceneManager.LoadScene("Hallway");
         }
     }
 
