@@ -19,6 +19,7 @@ public class ShopMenu : MonoBehaviour{
       public int item2Cost = 4;
       public int item3Cost = 5;
       //public AudioSource KaChingSFX;
+    
 
       void Start (){
             shopMenuUI.SetActive(false);
