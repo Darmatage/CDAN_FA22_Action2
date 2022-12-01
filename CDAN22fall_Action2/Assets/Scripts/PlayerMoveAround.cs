@@ -16,9 +16,12 @@ public class PlayerMoveAround : MonoBehaviour {
            //anim = gameObject.GetComponentInChildren<Animator>();
            rb2D = transform.GetComponent<Rigidbody2D>();
 
-           if ((GameTracking.isThisHallway=true)&&(GameTracking.escapedRoom1=true)){
-             ((Input.GetAxis("Horizontal") != -29.8) || (Input.GetAxis("Vertical") != -32.8));
-                       }
+			//previous error: was looking at non-static variable and only had one =
+           if ((GameTracking.isHallway==true)&&(GameTracking.escapedRoom1==true)){
+			   //what are you trying to do here-- are you trying to put thr player in a location??
+             //((Input.GetAxis("Horizontal") != -29.8) || (Input.GetAxis("Vertical") != -32.8));
+			 transform.position = new Vector2 (-29.8f, -32.8f);
+           }
       }
 
       void Update(){

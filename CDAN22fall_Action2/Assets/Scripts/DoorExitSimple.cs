@@ -10,10 +10,10 @@ public class DoorExitSimple : MonoBehaviour{
 
 	public GameObject doorOpen;
 	public GameObject doorClosed;
-  private GameObject shopEntrance;
-  private GameObject BathroomDoor;
-  private GameObject SiblingRoomDoor;
-  private GameObject ShopEntrance;
+	public GameObject shopEntrance; //these were private, so they could not be filled...? why here at all?
+	public GameObject bathroomDoor; //these were private, so they could not be filled...? why here at all?
+	public GameObject siblingRoomDoor; //these were private, so they could not be filled...? why here at all?
+	//private GameObject shopEntrance;
 	public bool canEnter=false;
 
 
@@ -21,9 +21,9 @@ public class DoorExitSimple : MonoBehaviour{
 	void Start(){
 		doorOpen.SetActive(false);
 		doorClosed.SetActive(true);
-    shopEntrance.SetActive(true);
-    BathroomDoor.SetActive(false);
-    SiblingRoomDoor.SetActive(false);
+		shopEntrance.SetActive(true);
+		bathroomDoor.SetActive(false);
+		siblingRoomDoor.SetActive(false);
 	}
 
 	void Update(){
@@ -33,16 +33,17 @@ public class DoorExitSimple : MonoBehaviour{
 			}else {canEnter=false;}
 		}
 
-    if (GameTracking.isHallway){
-      canEnter=true;
-      BathroomDoor.SetActive(true);
-      SiblingRoomDoor.SetActive(true);
-      doorClosed.SetActive(false);
-      doorOpen.SetActive(true);
-
-    }else{canEnter=false;
-          GameTracking.isRoom2=false;
-          GameTracking.isRoom3=false;}
+		if (GameTracking.isHallway){
+			canEnter=true;
+			bathroomDoor.SetActive(true);
+			siblingRoomDoor.SetActive(true);
+			doorClosed.SetActive(false);
+			doorOpen.SetActive(true);
+		}else{
+			canEnter=false;
+			GameTracking.isRoom2=false; //why are these here?
+			GameTracking.isRoom3=false;
+			}
 
 		if (GameTracking.isRoom2){
 			if(GameTracking.hasFoundKey2){
@@ -63,7 +64,7 @@ public class DoorExitSimple : MonoBehaviour{
 
     public void OnTriggerEnter2D(Collider2D other){
         if ((other.gameObject.tag == "Player")&&(canEnter)){
-            SceneManager.LoadScene("Hallway");
+            SceneManager.LoadScene(NextLevel);
         }
     }
 
