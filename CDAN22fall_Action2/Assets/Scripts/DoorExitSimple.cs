@@ -11,6 +11,9 @@ public class DoorExitSimple : MonoBehaviour{
 	public GameObject doorOpen;
 	public GameObject doorClosed;
   private GameObject shopEntrance;
+  private GameObject BathroomDoor;
+  private GameObject SiblingRoomDoor;
+  private GameObject ShopEntrance;
 	public bool canEnter=false;
 
 
@@ -19,6 +22,8 @@ public class DoorExitSimple : MonoBehaviour{
 		doorOpen.SetActive(false);
 		doorClosed.SetActive(true);
     shopEntrance.SetActive(true);
+    BathroomDoor.SetActive(false);
+    SiblingRoomDoor.SetActive(false);
 	}
 
 	void Update(){
@@ -30,8 +35,11 @@ public class DoorExitSimple : MonoBehaviour{
 
     if (GameTracking.isHallway){
       canEnter=true;
-      GameTracking.isRoom2=true;
-      GameTracking.isRoom3=true;
+      BathroomDoor.SetActive(true);
+      SiblingRoomDoor.SetActive(true);
+      doorClosed.SetActive(false);
+      doorOpen.SetActive(true);
+
     }else{canEnter=false;
           GameTracking.isRoom2=false;
           GameTracking.isRoom3=false;}
