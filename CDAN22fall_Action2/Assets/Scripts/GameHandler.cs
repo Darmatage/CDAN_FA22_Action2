@@ -36,6 +36,7 @@ public class GameHandler : MonoBehaviour {
             updateStatsDisplay();
       }
 
+
       public void playerGetTokens(int newTokens){
             gotTokens += newTokens;
             updateStatsDisplay();
@@ -84,7 +85,7 @@ public class GameHandler : MonoBehaviour {
       }
 
       public void StartGame() {
-            SceneManager.LoadScene("Level1Bedroom");
+            SceneManager.LoadScene("Level1Bedroom_new");
       }
 
       public void RestartGame() {

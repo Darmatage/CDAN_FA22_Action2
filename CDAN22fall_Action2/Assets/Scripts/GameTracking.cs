@@ -11,8 +11,8 @@ public class GameTracking : MonoBehaviour{
 	public static bool isRoom3=false;
 	public static bool isRoom4=false;
 	public static bool isRoom5=false;
-	public static bool isRoom6=false;
-	public static bool isRoom7=false;
+	//public static bool isRoom6=false;
+	//public static bool isRoom7=false;
 
 	public bool isThisHallway=false;
 	public bool isThisRoom1=true;
@@ -20,8 +20,8 @@ public class GameTracking : MonoBehaviour{
 	public bool isThisRoom3=false;
 	public bool isThisRoom4=false;
 	public bool isThisRoom5=false;
-	public bool isThisRoom6=false;
-	public bool isThisRoom7=false;
+	//public bool isThisRoom6=false;
+	//public bool isThisRoom7=false;
 
 	// puzzle 1 variables:
     public static bool escapedRoom1 = false;
@@ -39,7 +39,6 @@ public class GameTracking : MonoBehaviour{
 	// puzzle 2 variables:
       public static bool escapedRoom2 = false;
 	public static bool hasFoundKey2 = false;
-
 
 	 //room 2 temp test variables
 	public bool escapedRoom2_test = false;
@@ -62,12 +61,12 @@ public class GameTracking : MonoBehaviour{
 
 
 	// puzzle 6 variables:
-      public static bool escapedRoom6 = false;
+      //public static bool escapedRoom6 = false;
 
 
 
 	  // puzzle 7 variables:
-      public static bool escapedRoom7 = false;
+      //public static bool escapedRoom7 = false;
 
 
 	void Update(){
@@ -77,8 +76,8 @@ public class GameTracking : MonoBehaviour{
 		if (isThisRoom3){isRoom3=true;} else {isRoom3=false;}
 		if (isThisRoom4){isRoom4=true;} else {isRoom4=false;}
 		if (isThisRoom5){isRoom5=true;} else {isRoom5=false;}
-		if (isThisRoom6){isRoom6=true;} else {isRoom6=false;}
-		if (isThisRoom7){isRoom7=true;} else {isRoom7=false;}
+		//if (isThisRoom6){isRoom6=true;} else {isRoom6=false;}
+		//if (isThisRoom7){isRoom7=true;} else {isRoom7=false;}
 
 
 		//room 1 testing

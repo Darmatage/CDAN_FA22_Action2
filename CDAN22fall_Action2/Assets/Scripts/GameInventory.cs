@@ -16,11 +16,8 @@ public class GameInventory : MonoBehaviour {
       public static bool item3bool = false;
       public static bool item4bool = false;
       public static bool item5bool = false;
-//<<<<<<< HEAD:CDAN22fall_Action2/Assets/Scenes/Scripts/GameInventory.cs
       public static int coins = 0;
-//=======
       //public static int coins = 0;
-//>>>>>>> 2f1081769f1b76423f06eaa0acc79d3fc771e952:CDAN22fall_Action2/Assets/Scripts/GameInventory.cs
 
       public static int item1num = 0;
       public static int item2num = 0;
@@ -33,10 +30,6 @@ public class GameInventory : MonoBehaviour {
       public GameObject item3image;
       public GameObject item4image;
       public GameObject item5image;
-//<<<<<<< HEAD:CDAN22fall_Action2/Assets/Scenes/Scripts/GameInventory.cs
-      public GameObject coinText;
-//=======
-
 
 	  public Text item1Text;
 	  public Text item2Text;
@@ -45,10 +38,8 @@ public class GameInventory : MonoBehaviour {
 	  public Text item5Text;
 	  //public GameObject coinText;
 
-//>>>>>>> 2f1081769f1b76423f06eaa0acc79d3fc771e952:CDAN22fall_Action2/Assets/Scripts/GameInventory.cs
-
       void Start(){
-            InventoryMenu.SetActive(true);
+            InventoryMenu.SetActive(false);
             buttonCraft1.SetActive(false);
             //CraftMenu.SetActive(false);
             InventoryDisplay();
@@ -61,13 +52,8 @@ public class GameInventory : MonoBehaviour {
             if (item4bool == true) {item4image.SetActive(true);} else {item4image.SetActive(false);}
             if (item5bool == true) {item5image.SetActive(true);} else {item5image.SetActive(false);}
 
-//<<<<<<< HEAD:CDAN22fall_Action2/Assets/Scenes/Scripts/GameInventory.cs
-            Text coinTextB = coinText.GetComponent<Text>();
-            coinTextB.text = ("COINS: " + coins);
-//=======
             //Text coinTextB = coinText.GetComponent<Text>();
             //coinTextB.text = ("COINS: " + coins);
-//>>>>>>> 2f1081769f1b76423f06eaa0acc79d3fc771e952:CDAN22fall_Action2/Assets/Scripts/GameInventory.cs
       }
 
       public void InventoryAdd(string item){
@@ -124,17 +110,11 @@ public class GameInventory : MonoBehaviour {
       else { buttonCraft1.SetActive(false); }
       }
 
-//<<<<<<< HEAD:CDAN22fall_Action2/Assets/Scenes/Scripts/GameInventory.cs
-      public void CoinChange(int amount){
-            coins +=amount;
-            InventoryDisplay();
-      }
-//=======
+
       //public void CoinChange(int amount){
             //coins +=amount;
             //InventoryDisplay();
       //}
-//>>>>>>> 2f1081769f1b76423f06eaa0acc79d3fc771e952:CDAN22fall_Action2/Assets/Scripts/GameInventory.cs
 
       // Open and Close the Inventory. Use this function on a button next to the inventory bar.
       public void OpenCloseInventory(){
@@ -166,8 +146,5 @@ public class GameInventory : MonoBehaviour {
             InventoryAdd("weapon1"); // sample inventory item to be added, needs supporting UI images
             InventoryRemove("item1", 2); InventoryRemove("item4",1); // sample inventory items to be removed
       }
-//<<<<<<< HEAD:CDAN22fall_Action2/Assets/Scenes/Scripts/GameInventory.cs
+
   }
-//=======
-//}
-//>>>>>>> 2f1081769f1b76423f06eaa0acc79d3fc771e952:CDAN22fall_Action2/Assets/Scripts/GameInventory.cs

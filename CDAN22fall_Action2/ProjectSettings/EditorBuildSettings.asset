@@ -12,17 +12,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Credits.unity
     guid: d85e75f60964c4d7dba75471b56583cf
   - enabled: 1
-    path: Assets/Scenes/Level1Bedroom.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Level1Bedroom_new.unity
+    guid: 523c44b46493e43b281e72031a4505c6
   - enabled: 1
     path: Assets/Scenes/Level2Bathroom.unity
     guid: 9e1abb71310ee4b1c96fa4bfe619f395
   - enabled: 1
     path: Assets/Scenes/Level3SiblingBedroom.unity
     guid: 3e3ffbe15a76d4b03815b33e9868d221
-  - enabled: 1
-    path: Assets/Scenes/HallwayShop.unity
-    guid: 06375a4e11e7241f1915c8a586c1fd5f
   - enabled: 1
     path: Assets/Scenes/TopFloorHallway.unity
     guid: c59f78b2f849b42909f086e1e03d38ff

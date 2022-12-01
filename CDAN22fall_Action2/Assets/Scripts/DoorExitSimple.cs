@@ -10,10 +10,9 @@ public class DoorExitSimple : MonoBehaviour{
 
 	public GameObject doorOpen;
 	public GameObject doorClosed;
-	public GameObject shopEntrance; //these were private, so they could not be filled...? why here at all?
-	public GameObject bathroomDoor; //these were private, so they could not be filled...? why here at all?
-	public GameObject siblingRoomDoor; //these were private, so they could not be filled...? why here at all?
-	//private GameObject shopEntrance;
+	//public GameObject shopEntrance; //these were private, so they could not be filled...? why here at all?
+	//public GameObject bathroomDoor; //these were private, so they could not be filled...? why here at all?
+	//public GameObject siblingRoomDoor; //these were private, so they could not be filled...? why here at all?
 	public bool canEnter=false;
 
 
@@ -21,29 +20,19 @@ public class DoorExitSimple : MonoBehaviour{
 	void Start(){
 		doorOpen.SetActive(false);
 		doorClosed.SetActive(true);
-		shopEntrance.SetActive(true);
-		bathroomDoor.SetActive(false);
-		siblingRoomDoor.SetActive(false);
 	}
 
 	void Update(){
+		
+		if (GameTracking.isHallway){
+			canEnter=true;
+		}
+		
 		if (GameTracking.isRoom1){
 			if(GameTracking.hasFoundKey1){
 				canEnter=true;
 			}else {canEnter=false;}
 		}
-
-		if (GameTracking.isHallway){
-			canEnter=true;
-			bathroomDoor.SetActive(true);
-			siblingRoomDoor.SetActive(true);
-			doorClosed.SetActive(false);
-			doorOpen.SetActive(true);
-		}else{
-			canEnter=false;
-			GameTracking.isRoom2=false; //why are these here?
-			GameTracking.isRoom3=false;
-			}
 
 		if (GameTracking.isRoom2){
 			if(GameTracking.hasFoundKey2){
