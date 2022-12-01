@@ -24,6 +24,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Level3SiblingBedroom.unity
     guid: 3e3ffbe15a76d4b03815b33e9868d221
   - enabled: 1
+    path: Assets/Scenes/WinScreen.unity
+    guid: a16b3c9f99275472590aaae00d5a2e45
+  - enabled: 1
+    path: Assets/Scenes/LoseScreen.unity
+    guid: 9e7b99c626c61470b8de5382a1201313
+  - enabled: 1
     path: Assets/Scenes/HallwayShop.unity
     guid: 06375a4e11e7241f1915c8a586c1fd5f
   - enabled: 1
