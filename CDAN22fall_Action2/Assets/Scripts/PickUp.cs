@@ -18,19 +18,14 @@ public class PickUp : MonoBehaviour{
       public void OnTriggerEnter2D (Collider2D other){
             if (other.gameObject.tag == "Player"){
                   GetComponent<Collider2D>().enabled = false;
+                  GameTracking.hasFoundKey1=true;
                   StartCoroutine(DestroyThis());
+              }
 
-                  if (GameTracking.hasFoundKey1 == true) {
-                      TextBox.SetActive(true);
-                      GameTracking.hasFoundKey1=true;
-                  }
-
-            }
-      }
+          }
 
       IEnumerator DestroyThis(){
             yield return new WaitForSeconds(0.3f);
             Destroy(gameObject);
       }
-
-}
+  }

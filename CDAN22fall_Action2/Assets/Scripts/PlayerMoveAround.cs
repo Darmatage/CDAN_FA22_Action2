@@ -15,6 +15,10 @@ public class PlayerMoveAround : MonoBehaviour {
       void Start(){
            //anim = gameObject.GetComponentInChildren<Animator>();
            rb2D = transform.GetComponent<Rigidbody2D>();
+
+           if ((GameTracking.isThisHallway=true)&&(GameTracking.escapedRoom1=true)){
+             ((Input.GetAxis("Horizontal") != -29.8) || (Input.GetAxis("Vertical") != -32.8));
+                       }
       }
 
       void Update(){
