@@ -585,6 +585,7 @@ PrefabInstance:
       value: GameHandler
       objectReference: {fileID: 0}
     m_RemovedComponents:
+    - {fileID: 0}
     - {fileID: 9060652380400873298, guid: 8b6a5e57b172b457aaa4f9b396b2aa20, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 8b6a5e57b172b457aaa4f9b396b2aa20, type: 3}
 --- !u!1 &1325859230
@@ -16647,6 +16648,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1740578089}
+  - component: {fileID: 1740578091}
+  - component: {fileID: 1740578092}
   - component: {fileID: 1740578090}
   m_Layer: 0
   m_Name: BathroomDoor
@@ -16684,10 +16687,57 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f71e6009eac8154fbafc6192920b99f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextLevel: Lebel2Bathroom
+  NextLevel: Level2Bathroom
   doorOpen: {fileID: 429282268}
   doorClosed: {fileID: 445807939}
   canEnter: 1
+--- !u!61 &1740578091
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740578088}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.016452312, y: -0.2467885}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.3619566, y: 1.6251974}
+  m_EdgeRadius: 0
+--- !u!50 &1740578092
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1740578088}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &1896651942
 GameObject:
   m_ObjectHideFlags: 0
@@ -16697,6 +16747,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1896651943}
+  - component: {fileID: 1896651946}
+  - component: {fileID: 1896651945}
+  - component: {fileID: 1896651944}
   m_Layer: 0
   m_Name: SiblingRoomDoor
   m_TagString: Untagged
@@ -16721,6 +16774,69 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1896651944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896651942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f71e6009eac8154fbafc6192920b99f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NextLevel: Level3SiblingRoom
+  doorOpen: {fileID: 1325859230}
+  doorClosed: {fileID: 1607730413}
+  canEnter: 1
+--- !u!50 &1896651945
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896651942}
+  m_BodyType: 2
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
+--- !u!61 &1896651946
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1896651942}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 10.754093, y: 5.9561167}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1.5956001, y: 1.926508}
+  m_EdgeRadius: 0
 --- !u!1 &1952146173
 GameObject:
   m_ObjectHideFlags: 0
@@ -16818,7 +16934,7 @@ MonoBehaviour:
   NextLevel: HallwayShop
   doorOpen: {fileID: 635490328}
   doorClosed: {fileID: 635490328}
-  canEnter: 0
+  canEnter: 1
 --- !u!1 &1994604511
 GameObject:
   m_ObjectHideFlags: 0

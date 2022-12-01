@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Credits.unity
     guid: d85e75f60964c4d7dba75471b56583cf
   - enabled: 1
-    path: Assets/Scenes/Hallway.unity
+    path: Assets/Scenes/TopFloorHallway.unity
     guid: c59f78b2f849b42909f086e1e03d38ff
   - enabled: 1
     path: Assets/Scenes/Level2Bathroom.unity
@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HallwayShop.unity
     guid: 06375a4e11e7241f1915c8a586c1fd5f
+  - enabled: 1
+    path: Assets/Scenes/BottomFloorHallway.unity
+    guid: 5592af337d67b4027a3e4b259e2eeec8
   m_configObjects: {}

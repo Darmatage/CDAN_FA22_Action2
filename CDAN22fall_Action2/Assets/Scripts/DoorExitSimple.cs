@@ -10,6 +10,7 @@ public class DoorExitSimple : MonoBehaviour{
 
 	public GameObject doorOpen;
 	public GameObject doorClosed;
+  private GameObject shopEntrance;
 	public bool canEnter=false;
 
 
@@ -17,6 +18,7 @@ public class DoorExitSimple : MonoBehaviour{
 	void Start(){
 		doorOpen.SetActive(false);
 		doorClosed.SetActive(true);
+    shopEntrance.SetActive(true);
 	}
 
 	void Update(){

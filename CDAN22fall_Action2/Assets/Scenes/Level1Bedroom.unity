@@ -255,9 +255,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3f71e6009eac8154fbafc6192920b99f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NextLevel: Hallway
+  NextLevel: TopFloorHallway
   doorOpen: {fileID: 1738245499}
   doorClosed: {fileID: 1888673947}
+  shopEntrance: {fileID: 0}
   canEnter: 0
 --- !u!50 &222049227
 Rigidbody2D:
