@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 
-public class PickUp_UpDown : MonoBehaviour{
+public class PickUpDown : MonoBehaviour{
 
       //initial values, can be made public
       private Vector3 startPos;
