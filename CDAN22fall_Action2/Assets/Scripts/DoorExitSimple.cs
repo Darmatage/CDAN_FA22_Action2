@@ -10,9 +10,6 @@ public class DoorExitSimple : MonoBehaviour{
 
 	public GameObject doorOpen;
 	public GameObject doorClosed;
-	//public GameObject shopEntrance; //these were private, so they could not be filled...? why here at all?
-	//public GameObject bathroomDoor; //these were private, so they could not be filled...? why here at all?
-	//public GameObject siblingRoomDoor; //these were private, so they could not be filled...? why here at all?
 	public bool canEnter=false;
 
 
@@ -23,16 +20,22 @@ public class DoorExitSimple : MonoBehaviour{
 	}
 
 	void Update(){
-		
+
+// hallway
+
 		if (GameTracking.isHallway){
 			canEnter=true;
 		}
-		
+
+// room 1
+
 		if (GameTracking.isRoom1){
-			if(GameTracking.hasFoundKey1){
+			if(GameTracking.hasFoundLadder1){
 				canEnter=true;
 			}else {canEnter=false;}
 		}
+
+// room 2
 
 		if (GameTracking.isRoom2){
 			if(GameTracking.hasFoundKey2){

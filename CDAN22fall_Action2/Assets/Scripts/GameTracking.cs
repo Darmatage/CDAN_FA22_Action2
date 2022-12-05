@@ -25,23 +25,21 @@ public class GameTracking : MonoBehaviour{
 
 	// puzzle 1 variables:
     public static bool escapedRoom1 = false;
-    public static bool hasFoundPaper1 = false;
-    public static bool hasFoundKey1 = false;
+		public static bool hasFoundKey1 = false;
     public static bool hasFoundLadder1 = false;
 
 	//room 1 temp test variables
-	public bool escapedRoom1_test = false;
-    public bool hasFoundPaper1_test = false;
+		public bool escapedRoom1_test = false;
     public bool hasFoundKey1_test = false;
     public bool hasFoundLadder1_test = false;
 
 
 	// puzzle 2 variables:
       public static bool escapedRoom2 = false;
-	public static bool hasFoundKey2 = false;
+			public static bool hasFoundKey2 = false;
 
 	 //room 2 temp test variables
-	public bool escapedRoom2_test = false;
+		public bool escapedRoom2_test = false;
     public bool hasFoundKey2_test = false;
 
 
@@ -82,7 +80,6 @@ public class GameTracking : MonoBehaviour{
 
 		//room 1 testing
 		if (escapedRoom1_test){escapedRoom1=true;} else {escapedRoom1=false;}
-		if (hasFoundPaper1_test){hasFoundPaper1=true;} else {hasFoundPaper1=false;}
 		if (hasFoundKey1_test){hasFoundKey1=true;} else {hasFoundKey1=false;}
 		if (hasFoundLadder1_test){hasFoundLadder1=true;} else {hasFoundLadder1=false;}
 
