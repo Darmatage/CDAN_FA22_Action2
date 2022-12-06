@@ -11,7 +11,7 @@ public class GameInventory : MonoBehaviour {
       public bool InvIsOpen = false;
 
       //5 Inventory Items:
-      public static bool item1bool = false;
+      public static bool item1bool = false; //key1
       public static bool item2bool = false;
       public static bool item3bool = false;
       public static bool item4bool = false;
@@ -54,11 +54,27 @@ public class GameInventory : MonoBehaviour {
 
             //Text coinTextB = coinText.GetComponent<Text>();
             //coinTextB.text = ("COINS: " + coins);
+			
+			Text item1TextB = item1Text.GetComponent<Text>();
+            item1TextB.text = ("" + item1num);
+			
+			Text item2TextB = item2Text.GetComponent<Text>();
+            item2TextB.text = ("" + item2num);
+			
+			Text item3TextB = item3Text.GetComponent<Text>();
+            item3TextB.text = ("" + item3num);
+			
+			Text item4TextB = item4Text.GetComponent<Text>();
+            item4TextB.text = ("" + item4num);
+			
+			Text item5TextB = item5Text.GetComponent<Text>();
+            item5TextB.text = ("" + item5num);
+			
       }
 
       public void InventoryAdd(string item){
             string foundItemName = item;
-            if (foundItemName == "item1") {item1bool = true; item1num ++;}
+            if (foundItemName == "key1") {item1bool = true; item1num ++;}
             else if (foundItemName == "item2") {item2bool = true; item2num ++;}
             else if (foundItemName == "item3") {item3bool = true; item3num ++;}
             else if (foundItemName == "item4") {item4bool = true; item4num ++;}
@@ -77,7 +93,7 @@ public class GameInventory : MonoBehaviour {
 
       public void InventoryRemove(string item, int num){
             string itemRemove = item;
-            if (itemRemove == "item1") {
+            if (itemRemove == "key1") {
                   item1num -= num;
                   if (item1num <= 0) { item1bool =false; }
                   // Add any other intended effects: new item crafted, speed boost, slow time, etc

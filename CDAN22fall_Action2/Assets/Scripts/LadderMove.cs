@@ -28,7 +28,7 @@ public class LadderMove : MonoBehaviour {
         void OnTriggerStay2D(Collider2D other){
               if (other.gameObject.tag == "Player"){
                      canLadder = true;
-                     playerRB.gravityScale = 0;
+                     //playerRB.gravityScale = 0;
                      // if game has jumping, add bool to disable it, and set true here
               }
         }
@@ -36,7 +36,7 @@ public class LadderMove : MonoBehaviour {
         void OnTriggerExit2D(Collider2D other){
               if (other.gameObject.tag == "Player"){
                      canLadder = false;
-                     playerRB.gravityScale = 1;
+                     //playerRB.gravityScale = 1;
                      // if game has jumping, add bool to disable it, and set false here
               }
         }
