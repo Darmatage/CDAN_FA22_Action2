@@ -15,6 +15,9 @@ public class TextBoxManager : MonoBehaviour
        public int counter = 0;
        public int dialogueLength;
 
+	public bool isEvent = false;
+	public bool doEvent = false;
+
        void Start(){
               TextBox.SetActive(false);
               ButtonKeyTrigger.SetActive(false);
@@ -62,6 +65,9 @@ public class TextBoxManager : MonoBehaviour
                      TextBox.SetActive(false); //turn off the dialogue display
                      TextBox_text.text = "..."; //reset text
                      counter = 0; //reset counter
+					 if (isEvent == true){
+						 doEvent = true;
+					 }
               }
        }
 
