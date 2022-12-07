@@ -4,15 +4,15 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
-public class GameHandler : MonoBehaviour {
+public class GameHandler : MonoBehaviour{
 
       private GameObject player;
       public static int playerHealth = 100;
       public int StartPlayerHealth = 100;
       public GameObject healthText;
 
-      public static int gotTokens = 0;
-      public GameObject tokensText;
+      public static int gotButton = 0;
+      public GameObject buttonsText;
 
       public bool isDefending = false;
 
@@ -37,8 +37,8 @@ public class GameHandler : MonoBehaviour {
       }
 
 
-      public void playerGetTokens(int newTokens){
-            gotTokens += newTokens;
+      public void playerGetButtons(int newButton){
+            gotButton += newButton;
             updateStatsDisplay();
       }
 
@@ -69,8 +69,8 @@ public class GameHandler : MonoBehaviour {
             Text healthTextTemp = healthText.GetComponent<Text>();
             healthTextTemp.text = "HEALTH: " + playerHealth;
 
-            Text tokensTextTemp = tokensText.GetComponent<Text>();
-            tokensTextTemp.text = "GOLD: " + gotTokens;
+            Text buttonsTextTemp = buttonsText.GetComponent<Text>();
+            buttonsTextTemp.text = "" + gotButton;
       }
 
       public void playerDies(){
@@ -104,8 +104,7 @@ public class GameHandler : MonoBehaviour {
       public void Credits() {
             SceneManager.LoadScene("Credits");
       }
-public static bool gotitem1 = false;
+     public static bool gotitem1 = false;
      public static bool gotitem2 = false;
      public static bool gotitem3 = false;
    }
- 

@@ -18,5 +18,9 @@ public class PickUp_Inventory: MonoBehaviour {
                   //Debug.Log("You found an" + ItemName);
                   gameInventory.InventoryAdd(ItemName);
             }
+// room 1
+                  if (GameTracking.isRoom1==true){
+                    GameTracking.hasFoundKey1=true;
+                  }
       }
 }

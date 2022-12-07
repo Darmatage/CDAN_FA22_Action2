@@ -32,7 +32,7 @@ public class DoorExitSimple : MonoBehaviour{
 		if (GameTracking.isRoom1){
 			if(GameTracking.hasFoundLadder1){
 				canEnter=true;
-			}else {canEnter=false;}
+			}
 		}
 
 // room 2
@@ -40,22 +40,20 @@ public class DoorExitSimple : MonoBehaviour{
 		if (GameTracking.isRoom2){
 			if(GameTracking.hasFoundKey2){
 				canEnter=true;
-			} else {canEnter=false;}
+			}
 		}
+
+// able to enter
 
 		if (canEnter==true){
 			doorOpen.SetActive(true);
 			doorClosed.SetActive(false);
-		} else {
-			doorOpen.SetActive(false);
-			doorClosed.SetActive(true);
-		}
-
+		 }
 	}
 
 
     public void OnTriggerEnter2D(Collider2D other){
-        if ((other.gameObject.tag == "Player")&&(canEnter)){
+        if ((other.gameObject.tag == "Player")&&(canEnter==true)){
             SceneManager.LoadScene(NextLevel);
         }
     }

@@ -9,6 +9,10 @@ public class PickUp : MonoBehaviour{
                   GetComponent<Collider2D>().enabled = false;
                   //GetComponent<AudioSource>().Play();
                   StartCoroutine(DestroyThis());
+// room 1
+                if (GameTracking.isRoom1==true){
+                  GameTracking.hasFoundLadder1=true;
+                }
             }
       }
 
