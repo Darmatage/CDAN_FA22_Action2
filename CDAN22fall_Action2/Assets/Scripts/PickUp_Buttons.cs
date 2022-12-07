@@ -8,7 +8,9 @@ public class PickUp_Buttons : MonoBehaviour{
   public GameObject buttonArt;
   public GameObject buttonsText;
 
-  public static int gotButtons = 0;
+  private string buttonsDisplayText;
+
+  public static int gotButton = 0;
 
   void Start(){
     gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
@@ -25,7 +27,12 @@ public class PickUp_Buttons : MonoBehaviour{
             yield return new WaitForSeconds(0.3f);
             Destroy(gameObject);
     }
-    public void playerGetButtons(int newButtons){
-          gotButtons += newButtons;
+    public void playerGetButtons(int newButton){
+          gotButton += newButton;
+          updateStatsDisplay();
     }
+    public void updateStatsDisplay(){
+          buttonsDisplayText= "" + gotButton;
+    }
+
 }
