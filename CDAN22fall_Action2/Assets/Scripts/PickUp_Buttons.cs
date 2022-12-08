@@ -32,6 +32,7 @@ public class PickUp_Buttons : MonoBehaviour{
           updateStatsDisplay();
     }
     public void updateStatsDisplay(){
+          //Text buttonsTextTemp = buttonsText.GetComponent<Text>();
           buttonsDisplayText= "" + gotButton;
     }
 
