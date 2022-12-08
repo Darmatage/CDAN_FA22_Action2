@@ -1093,7 +1093,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: GAMETITLE
+  m_Text: Beyond the Walls
 --- !u!222 &2076517299
 CanvasRenderer:
   m_ObjectHideFlags: 0
