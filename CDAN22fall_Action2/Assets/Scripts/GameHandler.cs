@@ -81,7 +81,7 @@ public class GameHandler : MonoBehaviour{
       IEnumerator DeathPause(){
             player.GetComponent<PlayerMoveAround>().isAlive = false;
             yield return new WaitForSeconds(1.0f);
-            SceneManager.LoadScene("EndLose");
+            SceneManager.LoadScene("LoseScreen");
       }
 
       public void StartGame() {

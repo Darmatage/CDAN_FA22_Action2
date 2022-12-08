@@ -22,5 +22,12 @@ public class PickUp_Inventory: MonoBehaviour {
                   if (GameTracking.isRoom1==true){
                     GameTracking.hasFoundKey1=true;
                   }
+// room 3
+				  if (GameTracking.isRoom3==true){
+					GameTracking.hasFoundChalk=true;
+					GameTracking.hasFoundCandle=true;
+					GameTracking.hasFoundSpell=true;
+				  }
+					
       }
 }

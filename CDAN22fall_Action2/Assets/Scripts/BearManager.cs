@@ -14,6 +14,7 @@ public class BearManager : MonoBehaviour
 	
 	void Awake(){
 		gameObject.GetComponent<EnemyMoveHit>().enabled = false;
+		
 	}
 	
     void Start(){
@@ -32,6 +33,7 @@ public class BearManager : MonoBehaviour
 		
 		if (isAwake==true){
 			gameObject.GetComponent<EnemyMoveHit>().enabled = true;
+			
 		}
 		
     }
