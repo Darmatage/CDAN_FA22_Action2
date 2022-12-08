@@ -15,7 +15,10 @@ public class TextBoxManager : MonoBehaviour
        public int counter = 0;
        public int dialogueLength;
 
+
+	
 	public bool isEvent = false;
+	public bool atEvent = false;
 	public bool doEvent = false;
 
        void Start(){
@@ -65,7 +68,7 @@ public class TextBoxManager : MonoBehaviour
                      TextBox.SetActive(false); //turn off the dialogue display
                      TextBox_text.text = "..."; //reset text
                      counter = 0; //reset counter
-					 if (isEvent == true){
+					 if ((isEvent == true)&&(atEvent==true)){
 						 doEvent = true;
 					 }
               }

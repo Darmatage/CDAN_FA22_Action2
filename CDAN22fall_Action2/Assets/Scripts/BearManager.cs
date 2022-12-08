@@ -11,6 +11,7 @@ public class BearManager : MonoBehaviour
 	
 	public bool touchedBear = false;
 	public bool isAwake = false;
+	public bool isPurified = false;
 	
 	void Awake(){
 		gameObject.GetComponent<EnemyMoveHit>().enabled = false;
@@ -37,5 +38,18 @@ public class BearManager : MonoBehaviour
 		}
 		
     }
+	
+	public void OnTriggerEnter2D(Collider2D other){
+		if (other.gameObject.tag=="Player"){
+			textBoxMngr.atEvent = true;
+		}
+		
+		if (other.gameObject.tag=="pentagram"){
+			isPurified = true;
+		}
+		
+	}
+	
+	
 	
 }
