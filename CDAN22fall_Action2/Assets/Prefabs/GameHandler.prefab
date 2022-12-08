@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartPlayerHealth: 100
   healthText: {fileID: 0}
-  tokensText: {fileID: 0}
+  buttonsText: {fileID: 0}
   isDefending: 0
 --- !u!114 &255287852515285818
 MonoBehaviour:
@@ -62,14 +62,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isThisHallway: 0
-  isThisRoom1: 1
+  isThisRoom1: 0
   isThisRoom2: 0
   isThisRoom3: 0
   isThisRoom4: 0
   isThisRoom5: 0
   escapedRoom1_test: 0
-  hasFoundPaper1_test: 0
   hasFoundKey1_test: 0
   hasFoundLadder1_test: 0
   escapedRoom2_test: 0
   hasFoundKey2_test: 0
+  escapedRoom3_test: 0
+  hasFoundCandle_test: 0
+  hasFoundChalk_test: 0
+  hasFoundSpell_test: 0

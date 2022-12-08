@@ -9,6 +9,7 @@ TagManager:
   - GameHandler
   - ButtonTriggerManager
   - InteractiveComponent
+  - pentagram
   layers:
   - Default
   - TransparentFX

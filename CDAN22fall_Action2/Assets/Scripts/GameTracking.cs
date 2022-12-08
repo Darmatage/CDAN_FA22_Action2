@@ -6,7 +6,7 @@ public class GameTracking : MonoBehaviour{
 
 	//the current room
 	public static bool isHallway=false;
-	public static bool isRoom1=true;
+	public static bool isRoom1=false;
 	public static bool isRoom2=false;
 	public static bool isRoom3=false;
 	public static bool isRoom4=false;
@@ -15,7 +15,7 @@ public class GameTracking : MonoBehaviour{
 	//public static bool isRoom7=false;
 
 	public bool isThisHallway=false;
-	public bool isThisRoom1=true;
+	public bool isThisRoom1=false;
 	public bool isThisRoom2=false;
 	public bool isThisRoom3=false;
 	public bool isThisRoom4=false;
@@ -44,7 +44,17 @@ public class GameTracking : MonoBehaviour{
 
 
 	  // puzzle 3 variables:
-      public static bool escapedRoom3 = false;
+     public static bool escapedRoom3 = false;
+		public static bool hasFoundCandle = false;
+		public static bool hasFoundChalk = false;
+		public static bool hasFoundSpell = false;
+
+	//room 1 temp test variables
+		public bool escapedRoom3_test = false;
+    public bool hasFoundCandle_test = false;
+    public bool hasFoundChalk_test = false;
+	 public bool hasFoundSpell_test = false;
+
 
 
 
