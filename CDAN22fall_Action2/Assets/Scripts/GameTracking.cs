@@ -25,11 +25,11 @@ public class GameTracking : MonoBehaviour{
 
 	// puzzle 1 variables:
     public static bool escapedRoom1 = false;
-		public static bool hasFoundKey1 = false;
+	public static bool hasFoundKey1 = false;
     public static bool hasFoundLadder1 = false;
 
 	//room 1 temp test variables
-		public bool escapedRoom1_test = false;
+	public bool escapedRoom1_test = false;
     public bool hasFoundKey1_test = false;
     public bool hasFoundLadder1_test = false;
 

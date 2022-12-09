@@ -9,12 +9,12 @@ public class PauseMenu : MonoBehaviour {
 
         public static int playerStat;
 
-
         public static bool GameisPaused = false;
         public GameObject pauseMenuUI;
         public AudioMixer mixer;
         public static float volumeLevel = 1.0f;
         private Slider sliderVolumeCtrl;
+
 
         void Awake (){
                 SetLevel (volumeLevel);

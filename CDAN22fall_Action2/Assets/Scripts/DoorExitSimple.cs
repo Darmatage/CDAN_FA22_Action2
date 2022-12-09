@@ -7,12 +7,11 @@ public class DoorExitSimple : MonoBehaviour{
 
     public string NextLevel;
 
-
 	public GameObject doorOpen;
 	public GameObject doorClosed;
-	public bool canEnter=false;
+	public bool canEnter = false;
 
-
+	public bool seeOpen = false;
 
 	void Start(){
 		doorOpen.SetActive(false);
@@ -30,9 +29,9 @@ public class DoorExitSimple : MonoBehaviour{
 // room 1
 
 		if (GameTracking.isRoom1){
-			if(GameTracking.hasFoundLadder1){
+			//if(GameTracking.hasFoundLadder1){
 				canEnter=true;
-			}
+			//}
 		}
 
 // room 2
@@ -45,7 +44,7 @@ public class DoorExitSimple : MonoBehaviour{
 
 // able to enter
 
-		if (canEnter==true){
+		if ((canEnter==true)&&(seeOpen==true)){
 			doorOpen.SetActive(true);
 			doorClosed.SetActive(false);
 		 }

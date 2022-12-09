@@ -4125,6 +4125,7 @@ MonoBehaviour:
   timer: 0
   timerText: {fileID: 4242306057421407558}
   canTimer: 1
+  timerTextObj: {fileID: 4242306056704195709}
 --- !u!4 &6821361060336542775 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9060652380400873299, guid: 8b6a5e57b172b457aaa4f9b396b2aa20, type: 3}

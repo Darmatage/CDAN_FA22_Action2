@@ -4,12 +4,20 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class GameTimer : MonoBehaviour {
-       public int timer = 0;
-       private float theTimer = 0f;
-       public GameObject timerText;
-	   public bool canTimer = true;
+	public int timer = 0;
+	private float theTimer = 0f;
+	public GameObject timerText;
+	public bool canTimer = true;
 
-       void FixedUpdate(){
+	public GameObject timerTextObj;
+
+
+	void Start (){	
+		if (canTimer==false){timerTextObj.SetActive(false);} 
+		else {timerTextObj.SetActive(true);}
+	}
+
+	void FixedUpdate(){
 		   if (canTimer){
               theTimer += 0.01f;
               if (theTimer >= 1f){

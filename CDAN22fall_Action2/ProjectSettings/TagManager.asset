@@ -10,6 +10,7 @@ TagManager:
   - ButtonTriggerManager
   - InteractiveComponent
   - pentagram
+  - ladder
   layers:
   - Default
   - TransparentFX
