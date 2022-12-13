@@ -11,27 +11,33 @@ public class PlayerMoveAround : MonoBehaviour {
       public static float runSpeed = 7f;
       public float startSpeed = 7f;
       public bool isAlive = true;
+      public GameHandler gameHandler;
 
 	void Start(){
 		anim = gameObject.GetComponentInChildren<Animator>();
 		rb2D = transform.GetComponent<Rigidbody2D>();
 
-		// room 1
-		if (GameTracking.isRoom1==true){
-			transform.position = new Vector2(-28.4f, -23.5f);
-		}
-		// hallway
+// hallway
 		//previous error: was looking at non-static variable and only had one =
 		if ((GameTracking.isHallway==true)&&(GameTracking.escapedRoom1==true)){
 			//what are you trying to do here-- are you trying to put thr player in a location??
 			//((Input.GetAxis("Horizontal") != -29.8) || (Input.GetAxis("Vertical") != -32.8));
-			transform.position = new Vector2 (-29.8f, -32.8f);
+			transform.position = new Vector2 (-17.86f, -7.43f);
 		}
-      
-		// room 3
+
+    if ((GameTracking.isHallway==true)&&(GameTracking.escapedRoom2==true)){
+      transform.position = new Vector2 (-2.11f, 5.56f);
+    }
+
+    if ((GameTracking.isHallway==true)&&(GameTracking.escapedRoom3==true)){
+      transform.position = new Vector2 (-17.61f, 5.56f);
+    }
+
+// room 3
 		if (GameTracking.isRoom3==true){
 			transform.position = new Vector2 (37.1f,-2.9f);
 		}
+
 	}
 
 	void Update(){
@@ -67,5 +73,5 @@ public class PlayerMoveAround : MonoBehaviour {
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
-	  
+
 }
