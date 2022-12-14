@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9060652380400873299}
   - component: {fileID: 9060652380400873298}
   - component: {fileID: 255287852515285818}
+  - component: {fileID: 8025161565912855987}
   m_Layer: 0
   m_Name: GameHandler
   m_TagString: GameHandler
@@ -76,3 +77,17 @@ MonoBehaviour:
   hasFoundCandle_test: 0
   hasFoundChalk_test: 0
   hasFoundSpell_test: 0
+--- !u!114 &8025161565912855987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9060652380400873301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e01d5ee25cfdf458c816d92ad02c0ace, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pauseMenuUI: {fileID: 0}
+  mixer: {fileID: 24100000, guid: e298f232fcb0e45189f833f6fd34d6c8, type: 2}

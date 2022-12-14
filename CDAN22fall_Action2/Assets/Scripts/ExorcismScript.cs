@@ -60,11 +60,13 @@ public class ExorcismScript : MonoBehaviour
 	
 	public void StartExorcism(){
 		bear.GetComponent<EnemyMoveHit>().attackRange = 50;
+		bear.GetComponent<EnemyMoveHit>().target = GameObject.FindWithTag("pentagram").GetComponent<Transform>();
 		
 	}
 	
 	public void StopExorcism(){
 		bear.GetComponent<EnemyMoveHit>().attackRange = 10;
+		bear.GetComponent<EnemyMoveHit>().target = GameObject.FindWithTag("Player").GetComponent<Transform>();
 		
 	}
 	

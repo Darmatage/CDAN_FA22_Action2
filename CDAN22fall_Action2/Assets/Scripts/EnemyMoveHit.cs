@@ -7,7 +7,7 @@ public class EnemyMoveHit : MonoBehaviour {
        public Animator anim;
        public Rigidbody2D rb2D;
        public float speed = 4f;
-       private Transform target;
+       public Transform target;
        public int damage = 10;
 
        public int EnemyLives = 3;
