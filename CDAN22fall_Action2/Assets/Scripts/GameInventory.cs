@@ -144,7 +144,7 @@ public class GameInventory : MonoBehaviour {
                   if (item6num <= 0) { item6bool =false; }
                     // Add any other intended effects
 			}
-			else if (itemRemove == "item6") {
+			else if (itemRemove == "item7") {
                   item7num -= num;
                   if (item7num <= 0) { item7bool =false; }
                     // Add any other intended effects
