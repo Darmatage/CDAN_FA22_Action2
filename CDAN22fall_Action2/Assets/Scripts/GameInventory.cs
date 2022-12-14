@@ -17,6 +17,7 @@ public class GameInventory : MonoBehaviour {
       public static bool item4bool = false; //spell(room3)
       public static bool item5bool = false; //nailpolish (room5 livingroom)	  
 	  public static bool item6bool = false; //key2 (room5)	
+	  public static bool item7bool = false; //key3(room3)
 	  
       public static int coins = 0;
 
@@ -26,6 +27,7 @@ public class GameInventory : MonoBehaviour {
       public static int item4num = 0;
       public static int item5num = 0;
 	  public static int item6num = 0;
+	  public static int item7num = 0;
 
       public GameObject item1image;
       public GameObject item2image;
@@ -33,13 +35,15 @@ public class GameInventory : MonoBehaviour {
       public GameObject item4image;
       public GameObject item5image;
 	  public GameObject item6image;
-
+	  public GameObject item7image;
+	  
 	  public Text item1Text;
 	  public Text item2Text;
 	  public Text item3Text;
 	  public Text item4Text;
 	  public Text item5Text;
 	  public Text item6Text;
+	  public Text item7Text;
 	  //public Text coinText;
 
       void Start(){
@@ -56,6 +60,7 @@ public class GameInventory : MonoBehaviour {
             if (item4bool == true) {item4image.SetActive(true);} else {item4image.SetActive(false);}
             if (item5bool == true) {item5image.SetActive(true);} else {item5image.SetActive(false);}
 			if (item6bool == true) {item6image.SetActive(true);} else {item6image.SetActive(false);}
+			if (item7bool == true) {item7image.SetActive(true);} else {item7image.SetActive(false);}
 
             //Text coinTextB = coinText.GetComponent<Text>();
             //coinTextB.text = ("COINS: " + coins);
@@ -78,6 +83,9 @@ public class GameInventory : MonoBehaviour {
 			Text item6TextB = item6Text.GetComponent<Text>();
             item6TextB.text = ("" + item6num);
 			
+			Text item7TextB = item7Text.GetComponent<Text>();
+            item7TextB.text = ("" + item7num);
+			
       }
 
       public void InventoryAdd(string item){
@@ -88,6 +96,8 @@ public class GameInventory : MonoBehaviour {
             else if (foundItemName == "item4") {item4bool = true; item4num ++;}
             else if (foundItemName == "item5") {item5bool = true; item5num ++;}
 			else if (foundItemName == "item6") {item6bool = true; item6num ++;}
+			else if (foundItemName == "item7") {item7bool = true; item7num ++;}
+
             else { Debug.Log("This item does not exist to be added"); }
             InventoryDisplay();
 
@@ -133,6 +143,11 @@ public class GameInventory : MonoBehaviour {
                   item6num -= num;
                   if (item6num <= 0) { item6bool =false; }
                     // Add any other intended effects
+			}
+			else if (itemRemove == "item6") {
+                  item7num -= num;
+                  if (item7num <= 0) { item7bool =false; }
+                    // Add any other intended effects
             }
             else { Debug.Log("This item does not exist to be removed"); }
             InventoryDisplay();
@@ -168,6 +183,8 @@ public class GameInventory : MonoBehaviour {
             item4bool = false;
             item5bool = false;
 			item6bool = false;
+			item7bool = false;
+
 
             item1num = 0; // key 1
             item2num = 0; // chalk
@@ -175,6 +192,7 @@ public class GameInventory : MonoBehaviour {
             item4num = 0; // spell
             item5num = 0; // nail polish
 			item6num = 0; // key 2
+			item7num = 0; //key 3 
       }
 
 	//crafting function
