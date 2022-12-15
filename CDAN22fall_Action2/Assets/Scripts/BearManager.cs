@@ -14,6 +14,8 @@ public class BearManager : MonoBehaviour
 	public bool isAwake = false;
 	public bool isPurified = false;
 	
+	public GameObject lootDrop;
+	
 	void Awake(){
 		gameObject.GetComponent<EnemyMoveHit>().enabled = false;
 		
@@ -55,8 +57,9 @@ public class BearManager : MonoBehaviour
 		
 		if (other.gameObject.tag=="pentagram"){
 			isPurified = true;
+			Instantiate (lootDrop, transform.position, Quaternion.identity);
 			GameObject particleSys = Instantiate (soulParticles, transform.position, Quaternion.identity);
-             StartCoroutine(destroyParticles(particleSys));
+            StartCoroutine(destroyParticles(particleSys));
 		}
 		
 	}

@@ -55990,6 +55990,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PuzItem2_KEY
       objectReference: {fileID: 0}
+    - target: {fileID: 2288076800171672895, guid: 7664245d3e799473492639ddec0acf5d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7664245d3e799473492639ddec0acf5d, type: 3}
 --- !u!1001 &2572632459090131946
