@@ -11,6 +11,7 @@ public class GameTracking : MonoBehaviour{
 	public static bool isRoom3=false;
 	public static bool isRoom4=false;
 	public static bool isRoom5=false;
+	public static bool finishedAllPuzzles=false;
 	//public static bool isRoom6=false;
 	//public static bool isRoom7=false;
 
@@ -67,6 +68,15 @@ public class GameTracking : MonoBehaviour{
       public static bool escapedRoom5 = false;
 
 
+
+// top floor hallway
+
+public void AccessingDownstairs(){
+
+				if ((escapedRoom1)&&(escapedRoom2)&&(escapedRoom3)){
+					finishedAllPuzzles=true;
+				}
+			}
 
 	// puzzle 6 variables:
       //public static bool escapedRoom6 = false;
