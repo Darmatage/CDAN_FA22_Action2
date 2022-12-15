@@ -16,6 +16,11 @@ public class BearManager : MonoBehaviour
 	
 	public GameObject lootDrop;
 	
+	public BoxCollider2D collider1;
+	public BoxCollider2D collider2;
+	public BoxCollider2D collider3;
+
+	
 	void Awake(){
 		gameObject.GetComponent<EnemyMoveHit>().enabled = false;
 		
@@ -46,6 +51,9 @@ public class BearManager : MonoBehaviour
 			isAwake = false;
 			bearAsleep.GetComponent<TextBoxText>().enabled = false;
 			gameObject.GetComponent<EnemyMoveHit>().enabled = false;
+			collider1.enabled = false;
+			collider2.enabled = false;
+			collider3.enabled = false;
 		}
 		
     }
