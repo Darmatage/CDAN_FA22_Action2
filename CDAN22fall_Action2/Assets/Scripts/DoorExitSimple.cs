@@ -25,6 +25,11 @@ public class DoorExitSimple : MonoBehaviour{
 		if (GameTracking.isHallway){
 			canEnter=true;
 		}
+      if (GameTracking.isHallway){
+        if(GameTracking.finishedAllPuzzles==false){
+          canEnter=false;
+        }
+      }
 
 // room 1
 
