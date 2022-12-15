@@ -14,6 +14,13 @@ public class BearManager : MonoBehaviour
 	public bool isAwake = false;
 	public bool isPurified = false;
 	
+	public GameObject lootDrop;
+	
+	public BoxCollider2D collider1;
+	public BoxCollider2D collider2;
+	public BoxCollider2D collider3;
+
+	
 	void Awake(){
 		gameObject.GetComponent<EnemyMoveHit>().enabled = false;
 		
@@ -44,6 +51,9 @@ public class BearManager : MonoBehaviour
 			isAwake = false;
 			bearAsleep.GetComponent<TextBoxText>().enabled = false;
 			gameObject.GetComponent<EnemyMoveHit>().enabled = false;
+			collider1.enabled = false;
+			collider2.enabled = false;
+			collider3.enabled = false;
 		}
 		
     }
@@ -55,8 +65,9 @@ public class BearManager : MonoBehaviour
 		
 		if (other.gameObject.tag=="pentagram"){
 			isPurified = true;
+			Instantiate (lootDrop, transform.position, Quaternion.identity);
 			GameObject particleSys = Instantiate (soulParticles, transform.position, Quaternion.identity);
-             StartCoroutine(destroyParticles(particleSys));
+            StartCoroutine(destroyParticles(particleSys));
 		}
 		
 	}
