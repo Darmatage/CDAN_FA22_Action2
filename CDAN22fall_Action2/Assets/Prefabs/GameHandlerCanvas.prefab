@@ -4017,6 +4017,14 @@ PrefabInstance:
       propertyPath: buttonsText
       value: 
       objectReference: {fileID: 979567102030507204}
+    - target: {fileID: 9060652380400873298, guid: 8b6a5e57b172b457aaa4f9b396b2aa20, type: 3}
+      propertyPath: buttonDisplay
+      value: 
+      objectReference: {fileID: 979567101502631772}
+    - target: {fileID: 9060652380400873298, guid: 8b6a5e57b172b457aaa4f9b396b2aa20, type: 3}
+      propertyPath: healthDisplay
+      value: 
+      objectReference: {fileID: 979567102150297103}
     - target: {fileID: 9060652380400873299, guid: 8b6a5e57b172b457aaa4f9b396b2aa20, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4098,7 +4106,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   InventoryMenu: {fileID: 4876071630798187378}
   buttonCraft1: {fileID: 47992686589997921}
+  buttonOpenInventory: {fileID: 7410620334855837438}
   InvIsOpen: 0
+  canInventory: 1
   item1image: {fileID: 5862292166272324996}
   item2image: {fileID: 5772716624898058585}
   item3image: {fileID: 2582082840247909250}
