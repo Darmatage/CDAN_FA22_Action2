@@ -26,59 +26,54 @@ public class GameTracking : MonoBehaviour{
 	//public bool isThisRoom6=false;
 	//public bool isThisRoom7=false;
 
-	// puzzle 1 variables:
+	// puzzle 1 variables (first bedroom):
     public static bool escapedRoom1 = false;
 	public static bool hasFoundKey1 = false;
     public static bool hasFoundLadder1 = false;
 
 	//room 1 temp test variables
-	public bool escapedRoom1_test = false;
-    public bool hasFoundKey1_test = false;
-    public bool hasFoundLadder1_test = false;
+		public bool escapedRoom1_test = false;
+		public bool hasFoundKey1_test = false;
+		public bool hasFoundLadder1_test = false;
 
 
-	// puzzle 2 variables:
-      public static bool escapedRoom2 = false;
-			public static bool hasFoundKey2 = false;
+	// puzzle 2 variables (bathroom):
+	public static bool escapedRoom2 = false;
+	public static bool hasFoundKey2 = false;
 
 	 //room 2 temp test variables
 		public bool escapedRoom2_test = false;
-    public bool hasFoundKey2_test = false;
+		public bool hasFoundKey2_test = false;
 
 
-	  // puzzle 3 variables:
-     public static bool escapedRoom3 = false;
-		public static bool hasFoundCandle = false;
-		public static bool hasFoundChalk = false;
-		public static bool hasFoundSpell = false;
+	// puzzle 3 variables (goth sibling room):
+	public static bool escapedRoom3 = false;
+	public static bool hasFoundCandle = false;
+	public static bool hasFoundChalk = false;
+	public static bool hasFoundSpell = false;
 
 	//room 1 temp test variables
 		public bool escapedRoom3_test = false;
-    public bool hasFoundCandle_test = false;
-    public bool hasFoundChalk_test = false;
-	 public bool hasFoundSpell_test = false;
+		public bool hasFoundCandle_test = false;
+		public bool hasFoundChalk_test = false;
+		public bool hasFoundSpell_test = false;
+
+
+	// puzzle 4 variables (kitchen):
+	public static bool escapedRoom4 = false;
+
+	// puzzle 5 variables (living room):
+	public static bool escapedRoom5 = false;
 
 
 
+	// top floor hallway
+	public void AccessingDownstairs(){
 
-		// puzzle 4 variables:
-      public static bool escapedRoom4 = false;
-
-
-
-	  // puzzle 5 variables:
-      public static bool escapedRoom5 = false;
-
-
-
-// top floor hallway
-
-public void AccessingDownstairs(){
-
-				if ((escapedRoom1)&&(escapedRoom2)&&(escapedRoom3)){
-					finishedAllPuzzles=true;
-				}
-			}
+	if ((escapedRoom1)&&(escapedRoom3)&&(escapedRoom5)){
+		finishedAllPuzzles=true;
+		}
+	}
 
 	// puzzle 6 variables:
       //public static bool escapedRoom6 = false;
