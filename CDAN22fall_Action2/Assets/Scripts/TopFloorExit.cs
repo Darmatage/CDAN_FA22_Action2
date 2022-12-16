@@ -4,22 +4,29 @@ using UnityEngine;
 
 public class TopFloorExit : MonoBehaviour{
 
-  public BoxCollider2D collider1;
+	public GameObject stairsClosedArt;
+	public GameObject stairsOpenArt;
+	public GameObject stairsClosedText;
+  
+	public static bool finishedAllPuzzles = false;
 
-  public static bool finishedAllPuzzles=false;
+	void Start(){
+		stairsClosedArt.SetActive(true);
+		stairsOpenArt.SetActive(false);
+		stairsClosedText.SetActive(true);
+ 
+	}
 
-void Start(){
-  collider1.gameObject.GetComponent<BoxCollider2D>().enabled = true;
-}
+	public void AccessingDownstairs(){
 
-public void AccessingDownstairs(){
-
-  				if ((GameTracking.escapedRoom1)&&(GameTracking.escapedRoom2)&&(GameTracking.escapedRoom3)){
-  					finishedAllPuzzles=true;
-  				}
-          if(finishedAllPuzzles==true){
-            collider1.gameObject.GetComponent<BoxCollider2D>().enabled = false;
-          }
-  			}
-
+		//if ((GameTracking.escapedRoom1)&&(GameTracking.escapedRoom2)&&(GameTracking.escapedRoom3)){
+		if ((GameTracking.escapedRoom1)&&(GameTracking.escapedRoom3)){
+			finishedAllPuzzles = true;
+		}
+		if (finishedAllPuzzles == true){
+			stairsClosedArt.SetActive(false);
+			stairsOpenArt.SetActive(true);
+			stairsClosedText.SetActive(false);
+		}
+	}
 }
