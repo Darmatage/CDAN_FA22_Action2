@@ -1772,6 +1772,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 979567101502631771, guid: 5f422dcc7b6cd9842803a9ed7fb74f64, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 296
+      objectReference: {fileID: 0}
     - target: {fileID: 2350111653304504414, guid: 5f422dcc7b6cd9842803a9ed7fb74f64, type: 3}
       propertyPath: isThisShop
       value: 1
@@ -1790,7 +1794,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6821361060336542774, guid: 5f422dcc7b6cd9842803a9ed7fb74f64, type: 3}
       propertyPath: canButton
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6821361060336542774, guid: 5f422dcc7b6cd9842803a9ed7fb74f64, type: 3}
       propertyPath: canHealth
