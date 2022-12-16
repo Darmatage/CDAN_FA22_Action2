@@ -19,6 +19,10 @@ public class ChestManager : MonoBehaviour{
 	public bool hasKey = false;
 	public bool nearChest = false;
 
+	public bool isLevel1 = true;
+	public bool isLevel5 = false;
+
+	private Vector3 shiftLoot;
 
     // Start is called before the first frame update
     void Start(){
@@ -29,6 +33,8 @@ public class ChestManager : MonoBehaviour{
 		hasKeyText.SetActive(false);
 
 		chestColor = chestClosedObj.GetComponent<SpriteRenderer>().color;
+		
+		shiftLoot = new Vector3(0,2,0);
     }
 
     // Update is called once per frame
@@ -36,12 +42,18 @@ public class ChestManager : MonoBehaviour{
 
 		//check to see if the key is in the inventory
 		//set the "can open" text object active
-		if ((GameInventory.item1bool==true)&&(chestOpen == false)){
+		if ((GameInventory.item1bool==true)&&(chestOpen == false)&&(isLevel1)){
 			hasKey=true;
 			noKeyText.SetActive(false);
 			hasKeyText.SetActive(true);
 		}
 
+
+		if ((GameInventory.item5bool==true)&&(chestOpen == false)&&(isLevel5)){
+			hasKey=true;
+			noKeyText.SetActive(false);
+			hasKeyText.SetActive(true);
+		}
 
 		//if the player presses e and has the key
 		//open the chest
@@ -54,7 +66,7 @@ public class ChestManager : MonoBehaviour{
 			noKeyText.SetActive(false);
 			hasKeyText.SetActive(false);
 			//drop the loot
-			Instantiate (chestLoot, transform.position, Quaternion.identity);
+			Instantiate (chestLoot, (transform.position + shiftLoot), Quaternion.identity);
             GetComponent<Collider2D>().enabled = false;
 
 // room 1

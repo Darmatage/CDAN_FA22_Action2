@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 //using UnityEngine.Audio;
 
 public class ShopMenu : MonoBehaviour{
@@ -9,7 +10,7 @@ public class ShopMenu : MonoBehaviour{
       public GameHandler gameHandler;
       public static bool ShopisOpen = false;
       public GameObject shopMenuUI;
-      public GameObject buttonOpenShop;
+      public GameObject leaveButton;
 
       public GameObject item1BuyButton;
       public GameObject item2BuyButton;
@@ -18,11 +19,13 @@ public class ShopMenu : MonoBehaviour{
       public int item1Cost = 3;
       public int item2Cost = 4;
       public int item3Cost = 5;
+
+      public string NextLevel;
       //public AudioSource KaChingSFX;
 
 
       void Start (){
-            shopMenuUI.SetActive(false);
+        shopMenuUI.SetActive(true);
             gameHandler = GameObject.FindWithTag("GameHandler").GetComponent<GameHandler>();
       }
 
@@ -41,18 +44,9 @@ public class ShopMenu : MonoBehaviour{
       }
 
       //Button Functions:
-      public void Button_OpenShop(){
-           shopMenuUI.SetActive(true);
-           buttonOpenShop.SetActive(false);
-           ShopisOpen = true;
-           Time.timeScale = 0f;
-      }
 
-      public void Button_CloseShop() {
-           shopMenuUI.SetActive(false);
-           buttonOpenShop.SetActive(true);
-           ShopisOpen = false;
-           Time.timeScale = 1f;
+      public void Button_CloseShop(){
+        SceneManager.LoadScene(NextLevel);
       }
 
       public void Button_BuyItem1(){

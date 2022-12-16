@@ -7,18 +7,20 @@ public class GameInventory : MonoBehaviour {
       public GameObject InventoryMenu;
       // Crafting buttons:
       public GameObject buttonCraft1; // weapon1 creation
+      public GameObject buttonOpenInventory;
       //public GameObject CraftMenu;
       public bool InvIsOpen = false;
+      public bool canInventory = true;
 
       //5 Inventory Items:
       public static bool item1bool = false; //key1(room1 bedroom)
       public static bool item2bool = false; //chalk(room3 sibling)
       public static bool item3bool = false; //candle(room3)
       public static bool item4bool = false; //spell(room3)
-      public static bool item5bool = false; //nailpolish (room5 livingroom)	  
-	  public static bool item6bool = false; //key2 (room5)	
-	  public static bool item7bool = false; //key3(room3)
-	  
+      public static bool item5bool = false; //nailpolish (room5 livingroom)
+	    public static bool item6bool = false; //key2 (room5)
+	    public static bool item7bool = false; //key3(room3)
+
       public static int coins = 0;
 
       public static int item1num = 0;
@@ -26,17 +28,17 @@ public class GameInventory : MonoBehaviour {
       public static int item3num = 0;
       public static int item4num = 0;
       public static int item5num = 0;
-	  public static int item6num = 0;
-	  public static int item7num = 0;
+	    public static int item6num = 0;
+	    public static int item7num = 0;
 
       public GameObject item1image;
       public GameObject item2image;
       public GameObject item3image;
       public GameObject item4image;
       public GameObject item5image;
-	  public GameObject item6image;
-	  public GameObject item7image;
-	  
+	    public GameObject item6image;
+	    public GameObject item7image;
+
 	  public Text item1Text;
 	  public Text item2Text;
 	  public Text item3Text;
@@ -51,6 +53,10 @@ public class GameInventory : MonoBehaviour {
             buttonCraft1.SetActive(false);
             //CraftMenu.SetActive(false);
             InventoryDisplay();
+
+        if (canInventory==false){
+          buttonOpenInventory.SetActive(false);
+        }
       }
 
       void InventoryDisplay(){
@@ -64,28 +70,28 @@ public class GameInventory : MonoBehaviour {
 
             //Text coinTextB = coinText.GetComponent<Text>();
             //coinTextB.text = ("COINS: " + coins);
-			
+
 			Text item1TextB = item1Text.GetComponent<Text>();
             item1TextB.text = ("" + item1num);
-			
+
 			Text item2TextB = item2Text.GetComponent<Text>();
             item2TextB.text = ("" + item2num);
-			
+
 			Text item3TextB = item3Text.GetComponent<Text>();
             item3TextB.text = ("" + item3num);
-			
+
 			Text item4TextB = item4Text.GetComponent<Text>();
             item4TextB.text = ("" + item4num);
-			
+
 			Text item5TextB = item5Text.GetComponent<Text>();
             item5TextB.text = ("" + item5num);
-			
+
 			Text item6TextB = item6Text.GetComponent<Text>();
             item6TextB.text = ("" + item6num);
-			
+
 			Text item7TextB = item7Text.GetComponent<Text>();
             item7TextB.text = ("" + item7num);
-			
+
       }
 
       public void InventoryAdd(string item){
@@ -104,7 +110,7 @@ public class GameInventory : MonoBehaviour {
             if (!InvIsOpen){
                   OpenCloseInventory();
             }
-			
+
 			//crafting example
 			 if ((item1num >= 2) && (item4num >= 1)){       // sample inventory items to be used
             buttonCraft1.SetActive(true);
@@ -192,7 +198,7 @@ public class GameInventory : MonoBehaviour {
             item4num = 0; // spell
             item5num = 0; // nail polish
 			item6num = 0; // key 2
-			item7num = 0; //key 3 
+			item7num = 0; //key 3
       }
 
 	//crafting function

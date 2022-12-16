@@ -9,12 +9,17 @@ public class GameHandler : MonoBehaviour{
       private GameObject player;
       public static int playerHealth = 100;
       public int StartPlayerHealth = 100;
+      public GameObject healthDisplay;
       public GameObject healthText;
 
       public static int gotButton = 0;
+      public GameObject buttonDisplay;
       public GameObject buttonsText;
 
       public bool isDefending = false;
+      public bool canHealth = true;
+      public bool canButton = true;
+
 
       public static bool stairCaseUnlocked = false;
       //this is a flag check. Add to other scripts: GameHandler.stairCaseUnlocked = true;
@@ -28,6 +33,13 @@ public class GameHandler : MonoBehaviour{
       public static bool hasFoundLadder;
 
       void Start(){
+        if(canHealth==false){
+          healthDisplay.SetActive(false);
+        }
+        if (canButton==false){
+          buttonDisplay.SetActive(false);
+        }
+
             player = GameObject.FindWithTag("Player");
             sceneName = SceneManager.GetActiveScene().name;
             //if (sceneName=="MainMenu"){ //uncomment these two lines when the MainMenu exists
@@ -36,13 +48,15 @@ public class GameHandler : MonoBehaviour{
             updateStatsDisplay();
       }
 
-
       public void playerGetButtons(int newButton){
+        if(canButton){
             gotButton += newButton;
             updateStatsDisplay();
+        }
       }
 
       public void playerGetHit(int damage){
+        if(canHealth){
            if (isDefending == false){
                   playerHealth -= damage;
                   if (playerHealth >=0){
@@ -51,7 +65,7 @@ public class GameHandler : MonoBehaviour{
                   if (damage > 0){
                         player.GetComponent<PlayerHurt>().playerHit();       //play GetHit animation
                   }
-            }
+               }
 
            if (playerHealth > StartPlayerHealth){
                   playerHealth = StartPlayerHealth;
@@ -63,6 +77,7 @@ public class GameHandler : MonoBehaviour{
                   updateStatsDisplay();
                   playerDies();
             }
+         }
       }
 
       public void updateStatsDisplay(){

@@ -11,6 +11,7 @@ public class GameTracking : MonoBehaviour{
 	public static bool isRoom3=false;
 	public static bool isRoom4=false;
 	public static bool isRoom5=false;
+	public static bool isShop=false;
 	public static bool finishedAllPuzzles=false;
 	//public static bool isRoom6=false;
 	//public static bool isRoom7=false;
@@ -21,6 +22,7 @@ public class GameTracking : MonoBehaviour{
 	public bool isThisRoom3=false;
 	public bool isThisRoom4=false;
 	public bool isThisRoom5=false;
+	public bool isThisShop=false;
 	//public bool isThisRoom6=false;
 	//public bool isThisRoom7=false;
 

@@ -14,7 +14,9 @@ public class PianoManager : MonoBehaviour{
 	public GameObject theFail;
 	public GameObject theCorrect;
 	public GameObject theLoot;
-	public Transform pianoPos;
+	public Transform drawerPos;
+	public GameObject drawerLocked;
+	public GameObject drawerOpened;
 
 	public AudioSource keyC1;
 	public AudioSource keyD;
@@ -29,6 +31,9 @@ public class PianoManager : MonoBehaviour{
 	void Start(){
 		thePiano.SetActive(false);
 		theFail.SetActive(false);
+		drawerLocked.SetActive(true);
+		drawerOpened.SetActive(false);
+		
 		if (theNotes == ""){theNotes = "cdef";}
 		notesLength = theNotes.Length;
 
@@ -43,14 +48,14 @@ public class PianoManager : MonoBehaviour{
 		// keyC2.pitch = keyC2.pitch + ((1/pitchChange)*7) -0.1f;
 
 		//Version1b
-		keyC1.pitch = 0.2f;
-		keyD.pitch = 0.3f;
-		keyE.pitch = 0.4f;
-		keyF.pitch = 0.5f;
-		keyG.pitch = 0.65f;
-		keyA.pitch = 0.8f;
-		keyB.pitch = 0.9f;
-		keyC2.pitch = keyC2.pitch;
+		//keyC1.pitch = 0.2f;
+		//keyD.pitch = 0.3f;
+		//keyE.pitch = 0.4f;
+		//keyF.pitch = 0.5f;
+		//keyG.pitch = 0.65f;
+		//keyA.pitch = 0.8f;
+		//keyB.pitch = 0.9f;
+		//keyC2.pitch = keyC2.pitch;
 
 
 		//Version2
@@ -99,10 +104,12 @@ public class PianoManager : MonoBehaviour{
 		if (playerNotes == theNotes){
 			theCorrect.SetActive(true);
 			Debug.Log("You solved the Piano!");
-			Instantiate (theLoot, pianoPos.position, Quaternion.identity);
+			Vector3 shiftPos = new Vector3(0, 1, 0);
+			Instantiate (theLoot, (drawerPos.position - shiftPos), Quaternion.identity);
+			drawerLocked.SetActive(false);
+			drawerOpened.SetActive(true);
 		} else {
 			theFail.SetActive(true);
-
 		}
 	}
 
