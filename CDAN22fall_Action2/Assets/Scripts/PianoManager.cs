@@ -48,14 +48,14 @@ public class PianoManager : MonoBehaviour{
 		// keyC2.pitch = keyC2.pitch + ((1/pitchChange)*7) -0.1f;
 
 		//Version1b
-		keyC1.pitch = 0.2f;
-		keyD.pitch = 0.3f;
-		keyE.pitch = 0.4f;
-		keyF.pitch = 0.5f;
-		keyG.pitch = 0.65f;
-		keyA.pitch = 0.8f;
-		keyB.pitch = 0.9f;
-		keyC2.pitch = keyC2.pitch;
+		//keyC1.pitch = 0.2f;
+		//keyD.pitch = 0.3f;
+		//keyE.pitch = 0.4f;
+		//keyF.pitch = 0.5f;
+		//keyG.pitch = 0.65f;
+		//keyA.pitch = 0.8f;
+		//keyB.pitch = 0.9f;
+		//keyC2.pitch = keyC2.pitch;
 
 
 		//Version2
@@ -110,7 +110,6 @@ public class PianoManager : MonoBehaviour{
 			drawerOpened.SetActive(true);
 		} else {
 			theFail.SetActive(true);
-
 		}
 	}
 

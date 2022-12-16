@@ -19,6 +19,9 @@ public class ChestManager : MonoBehaviour{
 	public bool hasKey = false;
 	public bool nearChest = false;
 
+	public bool isLevel1 = true;
+	public bool isLevel5 = false;
+
 
     // Start is called before the first frame update
     void Start(){
@@ -36,12 +39,18 @@ public class ChestManager : MonoBehaviour{
 
 		//check to see if the key is in the inventory
 		//set the "can open" text object active
-		if ((GameInventory.item1bool==true)&&(chestOpen == false)){
+		if ((GameInventory.item1bool==true)&&(chestOpen == false)&&(isLevel1)){
 			hasKey=true;
 			noKeyText.SetActive(false);
 			hasKeyText.SetActive(true);
 		}
 
+
+		if ((GameInventory.item5bool==true)&&(chestOpen == false)&&(isLevel5)){
+			hasKey=true;
+			noKeyText.SetActive(false);
+			hasKeyText.SetActive(true);
+		}
 
 		//if the player presses e and has the key
 		//open the chest
