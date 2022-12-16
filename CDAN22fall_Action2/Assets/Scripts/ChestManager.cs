@@ -22,6 +22,7 @@ public class ChestManager : MonoBehaviour{
 	public bool isLevel1 = true;
 	public bool isLevel5 = false;
 
+	private Vector3 shiftLoot;
 
     // Start is called before the first frame update
     void Start(){
@@ -32,6 +33,8 @@ public class ChestManager : MonoBehaviour{
 		hasKeyText.SetActive(false);
 
 		chestColor = chestClosedObj.GetComponent<SpriteRenderer>().color;
+		
+		shiftLoot = new Vector3(0,2,0);
     }
 
     // Update is called once per frame
@@ -63,7 +66,7 @@ public class ChestManager : MonoBehaviour{
 			noKeyText.SetActive(false);
 			hasKeyText.SetActive(false);
 			//drop the loot
-			Instantiate (chestLoot, transform.position, Quaternion.identity);
+			Instantiate (chestLoot, (transform.position + shiftLoot), Quaternion.identity);
             GetComponent<Collider2D>().enabled = false;
 
 // room 1
