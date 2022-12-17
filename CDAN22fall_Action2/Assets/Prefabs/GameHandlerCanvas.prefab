@@ -2057,7 +2057,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &7448856505968957299
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2893,8 +2893,6 @@ MonoBehaviour:
   item5Text: {fileID: 4208048510585059128}
   item6Text: {fileID: 8861209756503636882}
   item7Text: {fileID: 3875132893023509902}
-  shopMenu: {fileID: 7448856505968957296}
-  shopIsOpen: 0
 --- !u!114 &4052624280264459770
 MonoBehaviour:
   m_ObjectHideFlags: 0

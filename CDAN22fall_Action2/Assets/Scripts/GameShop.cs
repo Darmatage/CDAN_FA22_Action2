@@ -36,6 +36,7 @@ public class GameShop : MonoBehaviour{
 		clue3.SetActive(false);
 	}
 
+
 	void Update(){
 		//open shop:
 		//if ((GameTracking.isShop)&&(Input.GetKeyDown("e"))){
