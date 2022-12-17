@@ -44,7 +44,7 @@ public class DoorExitSimple : MonoBehaviour{
 
 // able to enter
 
-		if ((canEnter==true)&&(seeOpen==true)){
+		if (canEnter==true){
 			doorOpen.SetActive(true);
 			doorClosed.SetActive(false);
 		 }
