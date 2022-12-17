@@ -402,8 +402,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 176398444}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 10.55, y: -11.3, z: 0}
-  m_LocalScale: {x: 0.91, y: 0.91, z: 0.91}
+  m_LocalPosition: {x: -1.1, y: -7.9, z: 0}
+  m_LocalScale: {x: 1.9999999, y: 1.9999999, z: 1.9999999}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 2036874241}
@@ -743,9 +743,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 290275730}
   m_LocalRotation: {x: -0, y: -0, z: 0.6068419, w: 0.79482263}
-  m_LocalPosition: {x: 26.69, y: 0.85, z: 0}
-  m_LocalScale: {x: 0.91, y: 0.91, z: 0.91}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: 24.5, y: -1, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2036874241}
   m_RootOrder: 1
@@ -47967,7 +47967,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2036874241}
   m_Layer: 0
-  m_Name: ShirtsPants
+  m_Name: SHIRTS-PANTS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

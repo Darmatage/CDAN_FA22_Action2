@@ -8,7 +8,7 @@ public class TopFloorExit : MonoBehaviour{
 	public GameObject stairsOpenArt;
 	public GameObject stairsClosedText;
   
-	public static bool finishedAllPuzzles = false;
+	public bool finishedAllPuzzles = false;
 
 	void Start(){
 		stairsClosedArt.SetActive(true);
