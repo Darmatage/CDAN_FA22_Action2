@@ -12,7 +12,7 @@ public class GameHandler : MonoBehaviour{
       public GameObject healthDisplay;
       public GameObject healthText;
 
-      public static int gotButton = 0;
+      public static int gotButtons = 0;
       public GameObject buttonDisplay;
       public GameObject buttonsText;
 
@@ -50,7 +50,7 @@ public class GameHandler : MonoBehaviour{
 
       public void playerGetButtons(int newButton){
         if(canButton){
-            gotButton += newButton;
+            gotButtons += newButton;
             updateStatsDisplay();
         }
       }
@@ -85,7 +85,7 @@ public class GameHandler : MonoBehaviour{
             healthTextTemp.text = "HEALTH: " + playerHealth;
 
             Text buttonsTextTemp = buttonsText.GetComponent<Text>();
-            buttonsTextTemp.text = "" + gotButton;
+            buttonsTextTemp.text = "" + gotButtons;
       }
 
       public void playerDies(){

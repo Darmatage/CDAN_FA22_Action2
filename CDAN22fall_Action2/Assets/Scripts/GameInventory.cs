@@ -48,18 +48,20 @@ public class GameInventory : MonoBehaviour {
 	  public Text item7Text;
 	  //public Text coinText;
 
-      void Start(){
-            InventoryMenu.SetActive(false);
-            buttonCraft1.SetActive(false);
-            //CraftMenu.SetActive(false);
-            InventoryDisplay();
+	
+	void Start(){
+		InventoryMenu.SetActive(false);
+		buttonCraft1.SetActive(false);
+		//CraftMenu.SetActive(false);
+		InventoryDisplay();
 
         if (canInventory==false){
           buttonOpenInventory.SetActive(false);
         }
-      }
+	}
 
-      void InventoryDisplay(){
+
+	void InventoryDisplay(){
             if (item1bool == true) {item1image.SetActive(true);} else {item1image.SetActive(false);}
             if (item2bool == true) {item2image.SetActive(true);} else {item2image.SetActive(false);}
             if (item3bool == true) {item3image.SetActive(true);} else {item3image.SetActive(false);}

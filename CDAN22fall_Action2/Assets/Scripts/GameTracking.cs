@@ -80,6 +80,12 @@ public class GameTracking : MonoBehaviour{
 	// puzzle 7 variables:
 	//public static bool escapedRoom7 = false;
 
+	//Shop Clue bools
+	public static bool gotClue1;
+	public static bool gotClue2;
+	public static bool gotClue3;
+
+
 	//BIG TESTING VARIABLES
 	[Header("TESTING BOOLS: DO NOT CLICK")]
 	public bool haveIBeenInRm1 = false;

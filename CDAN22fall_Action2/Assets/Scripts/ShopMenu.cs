@@ -5,6 +5,8 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 //using UnityEngine.Audio;
 
+//not using this script
+
 public class ShopMenu : MonoBehaviour{
 
       public GameHandler gameHandler;
@@ -30,15 +32,15 @@ public class ShopMenu : MonoBehaviour{
       }
 
       void Update (){
-            if ((GameHandler.gotButton >= item1Cost) && (GameHandler.gotitem1 == false)) {
+            if ((GameHandler.gotButtons >= item1Cost) && (GameHandler.gotitem1 == false)) {
                         item1BuyButton.SetActive(true);}
             else { item1BuyButton.SetActive(false);}
 
-            if ((GameHandler.gotButton >= item2Cost) && (GameHandler.gotitem2 == false)) {
+            if ((GameHandler.gotButtons >= item2Cost) && (GameHandler.gotitem2 == false)) {
                         item2BuyButton.SetActive(true);}
             else { item2BuyButton.SetActive(false);}
 
-            if ((GameHandler.gotButton >= item3Cost) && (GameHandler.gotitem3 == false)) {
+            if ((GameHandler.gotButtons >= item3Cost) && (GameHandler.gotitem3 == false)) {
                         item3BuyButton.SetActive(true);}
             else { item3BuyButton.SetActive(false);}
       }
