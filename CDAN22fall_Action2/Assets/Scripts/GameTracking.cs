@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class GameTracking : MonoBehaviour{
 
+	public static string recentRoom = "room1";
+
 	//the current room
 	public static bool isHallway=false;
 	public static bool isRoom1=false;
@@ -86,11 +88,11 @@ public class GameTracking : MonoBehaviour{
 
 	void Update(){
 		//switch current room
-		if (isThisRoom1){isRoom1=true;} else {isRoom1=false;}
-		if (isThisRoom2){isRoom2=true;} else {isRoom2=false;}
-		if (isThisRoom3){isRoom3=true;} else {isRoom3=false;}
-		if (isThisRoom4){isRoom4=true;} else {isRoom4=false;}
-		if (isThisRoom5){isRoom5=true;} else {isRoom5=false;}
+		if (isThisRoom1){isRoom1=true; recentRoom = "room1"; Debug.Log("I was in room1");} else {isRoom1=false;}
+		if (isThisRoom2){isRoom2=true; recentRoom = "room2"; Debug.Log("I was in room2");} else {isRoom2=false;}
+		if (isThisRoom3){isRoom3=true; recentRoom = "room3"; Debug.Log("I was in room3");} else {isRoom3=false;}
+		if (isThisRoom4){isRoom4=true; recentRoom = "room4"; Debug.Log("I was in room4");} else {isRoom4=false;}
+		if (isThisRoom5){isRoom5=true; recentRoom = "room5"; Debug.Log("I was in room5");} else {isRoom5=false;}
 		//if (isThisRoom6){isRoom6=true;} else {isRoom6=false;}
 		//if (isThisRoom7){isRoom7=true;} else {isRoom7=false;}
 
