@@ -8,7 +8,7 @@ public class TopFloorExit : MonoBehaviour{
 	public GameObject stairsOpenArt;
 	public GameObject stairsClosedText;
   
-	public bool finishedAllPuzzles = false;
+	public bool finishedAllTopPuzzles = false;
 
 	void Start(){
 		stairsClosedArt.SetActive(true);
@@ -17,16 +17,19 @@ public class TopFloorExit : MonoBehaviour{
  
 	}
 
-	public void AccessingDownstairs(){
+	void Update(){
 
 		//if ((GameTracking.escapedRoom1)&&(GameTracking.escapedRoom2)&&(GameTracking.escapedRoom3)){
 		if ((GameTracking.escapedRoom1)&&(GameTracking.escapedRoom3)){
-			finishedAllPuzzles = true;
+			finishedAllTopPuzzles = true;
 		}
-		if (finishedAllPuzzles == true){
+		
+		if (finishedAllTopPuzzles == true){
 			stairsClosedArt.SetActive(false);
 			stairsOpenArt.SetActive(true);
 			stairsClosedText.SetActive(false);
 		}
 	}
+	
+	
 }

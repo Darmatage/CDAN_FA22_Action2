@@ -4,38 +4,19 @@ using UnityEngine;
 
 public class PlayerMoveAround : MonoBehaviour {
 
-      public Animator anim;
-      //public AudioSource WalkSFX;
-      public Rigidbody2D rb2D;
-      private bool FaceRight = false; // determine which way player is facing.
-      public static float runSpeed = 7f;
-      public float startSpeed = 7f;
-      public bool isAlive = true;
-      public GameHandler gameHandler;
-
-
-	public Vector3 hallwayPos1 = new Vector3 (-17.5f, -6f, 0);
-	public Vector3 hallwayPos2 = new Vector3 (-17.5f, 2.5f, 0);
-	public Vector3 hallwayPos3 = new Vector3 (5.6f, 4.4f, 0);
+	public Animator anim;
+	//public AudioSource WalkSFX;
+	public Rigidbody2D rb2D;
+	private bool FaceRight = false; // determine which way player is facing.
+	public static float runSpeed = 7f;
+	public float startSpeed = 7f;
+	public bool isAlive = true;
+	public GameHandler gameHandler;
 
 
 	void Start(){
 		anim = gameObject.GetComponentInChildren<Animator>();
 		rb2D = transform.GetComponent<Rigidbody2D>();
-
-		// HALLWAY POSITIONS: GET THIS WORKING
-		
-		// if (GameTracking.isHallway==true){
-			// if (GameTracking.recentRoom=="room1"){
-				// transform.position = hallwayPos1;
-			// }
-			// else if (GameTracking.recentRoom=="room2"){
-				// transform.position = hallwayPos2;
-			// }
-			// else if (GameTracking.recentRoom=="room3"){
-				// transform.position = hallwayPos3;
-			// }				
-		// }
 
 	}
 
