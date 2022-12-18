@@ -8,11 +8,13 @@ public class BearManager : MonoBehaviour
 	public TextBoxManager textBoxMngr;
 	public GameObject bearAsleep;
 	public GameObject bearAttack;
+	public GameObject bearPure;
 	public GameObject soulParticles;
 	
 	public bool touchedBear = false;
 	public bool isAwake = false;
 	public bool isPurified = false;
+	public bool canPurify = false;
 	
 	public GameObject lootDrop;
 	
@@ -30,25 +32,28 @@ public class BearManager : MonoBehaviour
         textBoxMngr = GameObject.FindWithTag("ButtonTriggerManager").GetComponent<TextBoxManager>();
 		bearAsleep.SetActive(true);
 		bearAttack.SetActive(false);
+		bearPure.SetActive(false);
+		gameObject.GetComponent<EnemyMoveHit>().enabled = false;	
     }
 
     void Update()
     {
-        if (textBoxMngr.doEvent == true){
-			bearAsleep.SetActive(false);
-			bearAttack.SetActive(true);
+        if ((textBoxMngr.doEvent == true)&&(isPurified == false)){
 			isAwake = true;
 		}
 		
 		if (isAwake==true){
-			gameObject.GetComponent<EnemyMoveHit>().enabled = true;
-			
+			bearAsleep.SetActive(false);
+			bearAttack.SetActive(true);
+			bearPure.SetActive(false);
+			gameObject.GetComponent<EnemyMoveHit>().enabled = true;	
 		}
 		
 		if (isPurified == true){
-			bearAsleep.SetActive(true);
-			bearAttack.SetActive(false);
 			isAwake = false;
+			bearAsleep.SetActive(false);
+			//bearAttack.SetActive(false);
+			//bearPure.SetActive(true);
 			bearAsleep.GetComponent<TextBoxText>().enabled = false;
 			gameObject.GetComponent<EnemyMoveHit>().enabled = false;
 			collider1.enabled = false;
@@ -56,6 +61,9 @@ public class BearManager : MonoBehaviour
 			collider3.enabled = false;
 		}
 		
+		if ((GameInventory.item2bool)&&(GameInventory.item3bool)&&(GameInventory.item4bool)){
+			canPurify = true;
+		}
     }
 	
 	public void OnTriggerEnter2D(Collider2D other){
@@ -63,9 +71,8 @@ public class BearManager : MonoBehaviour
 			textBoxMngr.atEvent = true;
 		}
 		
-		if (other.gameObject.tag=="pentagram"){
+		if ((other.gameObject.tag=="pentagram")&&(canPurify)){
 			isPurified = true;
-			Instantiate (lootDrop, transform.position, Quaternion.identity);
 			GameObject particleSys = Instantiate (soulParticles, transform.position, Quaternion.identity);
             StartCoroutine(destroyParticles(particleSys));
 		}
@@ -73,8 +80,22 @@ public class BearManager : MonoBehaviour
 	}
 	
 	IEnumerator destroyParticles(GameObject pSys){
-              yield return new WaitForSeconds(3.2f);
-              Destroy(pSys);
+		bearAttack.SetActive(true);
+		bearPure.SetActive(false);
+			  yield return new WaitForSeconds(0.5f);
+		bearAttack.SetActive(false);
+		bearPure.SetActive(true);
+			  yield return new WaitForSeconds(0.5f);
+		bearAttack.SetActive(true);
+		bearPure.SetActive(false);	  
+			  yield return new WaitForSeconds(0.5f);
+		bearAttack.SetActive(false);
+		bearPure.SetActive(true);
+			  
+		Instantiate (lootDrop, transform.position, Quaternion.identity);
+		
+			yield return new WaitForSeconds(2.5f);
+		Destroy(pSys);
 	}
 	
 }
