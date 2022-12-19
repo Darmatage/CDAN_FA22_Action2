@@ -79,13 +79,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue:
-  - 'If you wish to pass, hear me out. '
-  - Free me from this cursed body.
-  - "Retrieve a maiden\u2019s spell,"
-  - 'chalk to confine, flames to purify. '
-  - 'Banish my soul to peaceful rest. '
-  - 'Now go, I awake! '
-  - This host you must best!
+  - 'Traveller, open your ears and listen well. '
+  - If you wish to leave, hear me out
+  - No fear, no doubt
+  - Travel to where darkness dwells
+  - "and retrieve for me one of the maiden\u2019s spells"
+  - One of light and pure folly
+  - to free me from this accursed body
+  - ' Flames to purify'
+  - Chalk to confine
+  - 'Banish my soul to a peaceful rest. '
+  - Now go, I awake and this host you must best.
   playerInRange: 0
   dialogueLength: 0
 --- !u!114 &302294188120983947
@@ -264,7 +268,7 @@ MonoBehaviour:
   target: {fileID: 0}
   damage: 10
   EnemyLives: 3
-  attackRange: 10
+  attackRange: 15
   isAttacking: 0
   knockBackForce: 20
 --- !u!1 &302294188198150232
