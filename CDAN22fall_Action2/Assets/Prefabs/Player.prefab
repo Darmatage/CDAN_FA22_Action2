@@ -284,9 +284,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d5d17fad74734623a63769fb6879623, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 0}
   rb2D: {fileID: 0}
   startSpeed: 10
   isAlive: 1
+  gameHandler: {fileID: 0}
 --- !u!114 &6811139813730324192
 MonoBehaviour:
   m_ObjectHideFlags: 0

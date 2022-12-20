@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PickUp_Buttons : MonoBehaviour{
+	
 
 	public GameHandler gameHandler;
 	public int buttonNum = 1;
@@ -17,13 +18,18 @@ public class PickUp_Buttons : MonoBehaviour{
 			GetComponent<Collider2D>().enabled = false;
 			//GetComponent<AudioSource>().Play();
 			StartCoroutine(DestroyThis());
+
+
+
+
 		}
+
 	}
-	
+
 	IEnumerator DestroyThis(){
 		yield return new WaitForSeconds(0.3f);
 		Destroy(gameObject);
     }
- 
+
 
 }
