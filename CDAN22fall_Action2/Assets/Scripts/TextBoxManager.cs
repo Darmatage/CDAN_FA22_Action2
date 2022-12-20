@@ -45,6 +45,10 @@ public class TextBoxManager : MonoBehaviour
 
        public void OpenDialogue(){
               TextBox.SetActive(true);
+			  
+			  //auto-loads the first line of dialogue
+              dialogueText.text = dialogue[0];
+              counter = 1;
        }
 
        public void CloseDialogue(){
