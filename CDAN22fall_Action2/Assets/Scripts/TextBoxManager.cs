@@ -47,7 +47,7 @@ public class TextBoxManager : MonoBehaviour
               TextBox.SetActive(true);
 			  
 			  //auto-loads the first line of dialogue
-              dialogueText.text = dialogue[0];
+              TextBox_text.text = dialogue[0];
               counter = 1;
        }
 
