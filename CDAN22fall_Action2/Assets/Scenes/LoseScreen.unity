@@ -369,7 +369,7 @@ GameObject:
   - component: {fileID: 162075792}
   - component: {fileID: 162075791}
   m_Layer: 5
-  m_Name: TextWin
+  m_Name: TextLose
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1055,7 +1055,7 @@ GameObject:
   - component: {fileID: 2045825150}
   - component: {fileID: 2045825149}
   m_Layer: 5
-  m_Name: WinScreenBG
+  m_Name: LoseScreenBG
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1101,7 +1101,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 27a07a9fc776347ba9fdab8191f8d152, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
