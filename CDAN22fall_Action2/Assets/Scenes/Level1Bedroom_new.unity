@@ -28034,7 +28034,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
+  m_Color: {r: 0.6544589, g: 0.7264151, b: 0.67159134, a: 1}
   m_Origin: {x: -118, y: -104, z: 0}
   m_Size: {x: 235, y: 206, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -57476,6 +57476,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 6713023055638741631, guid: 1b4702bd3dca54bd5999516a7547ee55, type: 3}
+      propertyPath: m_MaskAlphaCutoff
+      value: 0.185
+      objectReference: {fileID: 0}
     - target: {fileID: 6811139813730324193, guid: 1b4702bd3dca54bd5999516a7547ee55, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -57667,7 +57671,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 200
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.65471697, g: 0.7396582, b: 1, a: 0.28235295}
+  m_Color: {r: 0.1509434, g: 0.1509434, b: 0.1509434, a: 0.27058825}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
