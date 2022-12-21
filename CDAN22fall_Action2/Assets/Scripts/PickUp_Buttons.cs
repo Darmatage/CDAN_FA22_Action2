@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PickUp_Buttons : MonoBehaviour{
-	
+
 
 	public GameHandler gameHandler;
 	public int buttonNum = 1;
@@ -16,7 +16,7 @@ public class PickUp_Buttons : MonoBehaviour{
 		if (other.gameObject.tag == "Player"){
 			gameHandler.playerGetButtons(buttonNum);
 			GetComponent<Collider2D>().enabled = false;
-			//GetComponent<AudioSource>().Play();
+			GetComponent<AudioSource>().Play();
 			StartCoroutine(DestroyThis());
 
 
