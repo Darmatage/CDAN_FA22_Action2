@@ -4,13 +4,14 @@ using System.Collections.Generic;
 
 public class BGSoundScript : MonoBehaviour {
 
-        private static BGSoundScript instance = null;
+    private static BGSoundScript instance = null;
+	public bool stopOldMusic = false;
 
-        public static BGSoundScript Instance{
+	public static BGSoundScript Instance{
                 get {return instance;}
-        }
+	}
 
-        void Awake(){
+	void Awake(){
                 if (instance != null && instance != this){
                         Destroy(this.gameObject);
                         return;
@@ -18,5 +19,16 @@ public class BGSoundScript : MonoBehaviour {
                         instance = this;
                 }
                 DontDestroyOnLoad(this.gameObject);
-        }
+	}
+	
+	void Start(){
+		if (stopOldMusic == true){
+			StopOldMusic();
+		}
+	}
+		
+	public void StopOldMusic() {
+                BGSoundScript.Instance.gameObject.GetComponent<AudioSource>().Pause();
+    }
+		
 } 
