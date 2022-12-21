@@ -8,7 +8,7 @@ public class TextBoxManager : MonoBehaviour
 
        public GameObject TextBox;
        public Text TextBox_text;
-       public GameObject ButtonKeyTrigger;
+       //public GameObject ButtonKeyTrigger;
        public BoxCollider2D bc2D;
        public Rigidbody2D rb2D;
        public string[] dialogue;
@@ -23,17 +23,17 @@ public class TextBoxManager : MonoBehaviour
 
        void Start(){
               TextBox.SetActive(false);
-              ButtonKeyTrigger.SetActive(false);
+              //ButtonKeyTrigger.SetActive(false);
               dialogueLength = dialogue.Length; //allows us test dialogue without an NPC
        }
 
        private void OnTriggerEnter2D(Collider2D other){
               //temporary testing before NPC is created
               if (other.gameObject.tag == "InteractiveComponent"){
-                     ButtonKeyTrigger.SetActive(true);
+                     //ButtonKeyTrigger.SetActive(true);
               }
               if (Input.GetKeyDown("x")){
-                     ButtonKeyTrigger.SetActive(false);
+                     //ButtonKeyTrigger.SetActive(false);
                      TextBox.SetActive(true);
                      TextBox_text.text = "It works!"; //reset text
                      counter = 0; //reset counter
