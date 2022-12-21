@@ -12,6 +12,7 @@ public class BGSoundScript : MonoBehaviour {
 	}
 
 	void Awake(){
+		if (stopOldMusic == false){
                 if (instance != null && instance != this){
                         Destroy(this.gameObject);
                         return;
@@ -19,6 +20,7 @@ public class BGSoundScript : MonoBehaviour {
                         instance = this;
                 }
                 DontDestroyOnLoad(this.gameObject);
+		}
 	}
 	
 	void Start(){

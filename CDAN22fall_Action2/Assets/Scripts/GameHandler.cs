@@ -48,6 +48,10 @@ public class GameHandler : MonoBehaviour{
             updateStatsDisplay();
       }
 
+	void Update(){
+		makeLadderVisible();
+	}
+
       public void playerGetButtons(int newButton){
         if(canButton){
             gotButtons += newButton;
@@ -79,6 +83,14 @@ public class GameHandler : MonoBehaviour{
             }
          }
       }
+
+//this function is because we do not know why the ladder prefab keeps getting turned off
+	public void makeLadderVisible(){
+		if (GameObject.FindWithTag("ladder") != null){
+			GameObject.FindWithTag("ladder").SetActive(true);
+		}	
+	}
+
 
       public void updateStatsDisplay(){
             Text healthTextTemp = healthText.GetComponent<Text>();

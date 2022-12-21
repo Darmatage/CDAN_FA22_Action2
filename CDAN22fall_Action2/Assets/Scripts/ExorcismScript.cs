@@ -20,7 +20,6 @@ public class ExorcismScript : MonoBehaviour
 	// public bool hasSpell = false; 
 	
 	
-
     void Start(){
 		pentUnlit.SetActive(true);
 		pentLit.SetActive(false);
