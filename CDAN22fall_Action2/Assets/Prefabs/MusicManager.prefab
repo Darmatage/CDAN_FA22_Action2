@@ -183,6 +183,7 @@ MonoBehaviour:
   Room3: {fileID: 2149859410499522943}
   Room5: {fileID: 6463583238708318821}
   Shop: {fileID: 738743211512964469}
+  currentSong: 
 --- !u!1 &3040742846453286308
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,7 +226,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: e298f232fcb0e45189f833f6fd34d6c8, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 0ad03d95545d7684e8e50b7868bf0fcb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 067918e877799034fa64216b7c19f468, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -353,7 +354,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24300002, guid: e298f232fcb0e45189f833f6fd34d6c8, type: 2}
-  m_audioClip: {fileID: 8300000, guid: 0ad03d95545d7684e8e50b7868bf0fcb, type: 3}
+  m_audioClip: {fileID: 8300000, guid: cf90064410ca2d14982c0a455c478894, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
