@@ -92,7 +92,7 @@ public class GameHandler : MonoBehaviour{
 	public void makeLadderVisible(){
 		if (GameObject.FindWithTag("ladder") != null){
 			GameObject.FindWithTag("ladder").SetActive(true);
-		}	
+		}
 	}
 
 
@@ -122,7 +122,7 @@ public class GameHandler : MonoBehaviour{
       public void RestartGame() {
             SceneManager.LoadScene("MainMenu");
             playerHealth = StartPlayerHealth;
-			
+
 			GameTracking.escapedRoom1 = false;
 			GameTracking.escapedRoom3 = false;
 			GameTracking.escapedRoom5 = false;
@@ -139,5 +139,9 @@ public class GameHandler : MonoBehaviour{
       public void Credits() {
             SceneManager.LoadScene("Credits");
       }
-     
+
+      public void Controls(){
+        SceneManager.LoadScene("Controls");
+      }
+
    }
