@@ -20,7 +20,7 @@ public class EnemyMoveHit : MonoBehaviour {
 	   public float knockBackForce = 20f;
 
        void Start () {
-              //anim = GetComponentInChildren<Animator> ();
+              //anim = GetComponentInChildren<Animator> (); //add directly in scene
               rb2D = GetComponentInChildren<Rigidbody2D> ();
               scaleX = gameObject.transform.localScale.x;
 
@@ -50,26 +50,27 @@ public class EnemyMoveHit : MonoBehaviour {
        }
 
        
-       public void OnCollisionEnter2D(Collision2D other){
-              if (other.gameObject.tag == "Player") {
-                     isAttacking = true;
-                     anim.SetBool("Attack", true);
-					 anim.SetBool("Walk", false);
-                     gameHandler.playerGetHit(damage);
-                     //rend.material.color = new Color(2.4f, 0.9f, 0.9f, 0.5f);
-                     //StartCoroutine(HitEnemy());
-					 Rigidbody2D pushRB = other.gameObject.GetComponent<Rigidbody2D>();
-                    Vector2 moveDirectionPush = rb2D.transform.position - other.transform.position;
-                    pushRB.AddForce(moveDirectionPush.normalized * knockBackForce * - 1f, ForceMode2D.Impulse);
-                    StartCoroutine(EndKnockBack(pushRB));
-              }
-       }
+	public void OnCollisionEnter2D(Collision2D other){
+		if (other.gameObject.tag == "Player") {
+			isAttacking = true;
+			//anim.SetBool("Attack", true);
+			anim.SetTrigger("Attack");
+			anim.SetBool("Walk", false);
+			gameHandler.playerGetHit(damage);
+			//rend.material.color = new Color(2.4f, 0.9f, 0.9f, 0.5f);
+			//StartCoroutine(HitEnemy());
+			Rigidbody2D pushRB = other.gameObject.GetComponent<Rigidbody2D>();
+			Vector2 moveDirectionPush = rb2D.transform.position - other.transform.position;
+			pushRB.AddForce(moveDirectionPush.normalized * knockBackForce * - 1f, ForceMode2D.Impulse);
+			StartCoroutine(EndKnockBack(pushRB));
+		}
+	}
               
 
        public void OnCollisionExit2D(Collision2D other){
               if (other.gameObject.tag == "Player") {
                      isAttacking = false;
-                     anim.SetBool("Attack", false);
+                     //anim.SetBool("Attack", false);
               }
        }
 
