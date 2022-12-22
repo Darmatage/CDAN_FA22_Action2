@@ -7,8 +7,9 @@ public class GameHallwayPlayerPos : MonoBehaviour{
 	public Transform player;
 	
 	public Transform hallwayPos1;
-	public Transform hallwayPos2;
+	public Transform hallwayPosShop;
 	public Transform hallwayPos3;
+	public Transform hallwayPos5;
 	
 	// public Vector3 hallwayPos1 = new Vector3 (-17.5f, -6f, 0);
 	// public Vector3 hallwayPos2 = new Vector3 (-17.5f, 2.5f, 0);
@@ -25,14 +26,20 @@ public class GameHallwayPlayerPos : MonoBehaviour{
 				player.position = hallwayPos1.position;
 				Debug.Log("I put the player in p1");
 			}
-			else if (GameTracking.recentRoom == "room2"){
-				player.position = hallwayPos2.position;
+			else if (GameTracking.recentRoom == "shop"){
+				player.position = hallwayPosShop.position;
 				Debug.Log("I put the player in p2");
 			}
 			else if (GameTracking.recentRoom == "room3"){
 				player.position = hallwayPos3.position;
 				Debug.Log("I put the player in p3");
-			}				
+			}	
+
+			else if (GameTracking.recentRoom == "room5"){
+				player.position = hallwayPos5.position;
+				Debug.Log("I put the player in p5");
+			}
+			
 		//}
     }
 
