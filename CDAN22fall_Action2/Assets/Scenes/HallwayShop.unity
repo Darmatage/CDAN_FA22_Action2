@@ -174,6 +174,30 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4483457123204059981, guid: d025be3779a893949a3ffd9e4e5251f8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483457123204059981, guid: d025be3779a893949a3ffd9e4e5251f8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 5320953502706917031, guid: d025be3779a893949a3ffd9e4e5251f8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 72a4f82588adb49f8a82a7d44348236d, type: 3}
+    - target: {fileID: 5320953502706917031, guid: d025be3779a893949a3ffd9e4e5251f8, type: 3}
+      propertyPath: m_Color.b
+      value: 0.7871129
+      objectReference: {fileID: 0}
+    - target: {fileID: 5320953502706917031, guid: d025be3779a893949a3ffd9e4e5251f8, type: 3}
+      propertyPath: m_Color.g
+      value: 0.79107493
+      objectReference: {fileID: 0}
+    - target: {fileID: 5320953502706917031, guid: d025be3779a893949a3ffd9e4e5251f8, type: 3}
+      propertyPath: m_Color.r
+      value: 0.8301887
+      objectReference: {fileID: 0}
     - target: {fileID: 7095265026828597434, guid: d025be3779a893949a3ffd9e4e5251f8, type: 3}
       propertyPath: m_Name
       value: Clue3
@@ -348,6 +372,34 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4483457123204059981, guid: d025be3779a893949a3ffd9e4e5251f8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483457123204059981, guid: d025be3779a893949a3ffd9e4e5251f8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 5320953502706917031, guid: d025be3779a893949a3ffd9e4e5251f8, type: 3}
+      propertyPath: m_FlipX
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5320953502706917031, guid: d025be3779a893949a3ffd9e4e5251f8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 72a4f82588adb49f8a82a7d44348236d, type: 3}
+    - target: {fileID: 5320953502706917031, guid: d025be3779a893949a3ffd9e4e5251f8, type: 3}
+      propertyPath: m_Color.b
+      value: 0.8396226
+      objectReference: {fileID: 0}
+    - target: {fileID: 5320953502706917031, guid: d025be3779a893949a3ffd9e4e5251f8, type: 3}
+      propertyPath: m_Color.g
+      value: 0.7986796
+      objectReference: {fileID: 0}
+    - target: {fileID: 5320953502706917031, guid: d025be3779a893949a3ffd9e4e5251f8, type: 3}
+      propertyPath: m_Color.r
+      value: 0.41585082
+      objectReference: {fileID: 0}
     - target: {fileID: 7095265026828597434, guid: d025be3779a893949a3ffd9e4e5251f8, type: 3}
       propertyPath: m_Name
       value: Clue2
@@ -451,7 +503,7 @@ Transform:
   m_GameObject: {fileID: 477044651}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 8, y: 2, z: 1}
+  m_LocalScale: {x: 0.62, y: 0.5174375, z: 0.10625}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 55997795}
@@ -498,8 +550,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 90
-  m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 21300000, guid: 81526740a284843f4a7b81396107d6da, type: 3}
+  m_Color: {r: 0.9339623, g: 0.8859987, b: 0.8502581, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -11788,7 +11840,7 @@ Tilemap:
     m_Data: {r: 1, g: 1, b: 1, a: 1}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
-  m_Color: {r: 0.4811321, g: 0.441876, b: 0.36084908, a: 1}
+  m_Color: {r: 0.4528302, g: 0.41079938, b: 0.3225347, a: 1}
   m_Origin: {x: -19, y: -12, z: 0}
   m_Size: {x: 45, y: 27, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
@@ -14704,6 +14756,38 @@ PrefabInstance:
     - target: {fileID: 3876508753971183301, guid: d025be3779a893949a3ffd9e4e5251f8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483457123204059981, guid: d025be3779a893949a3ffd9e4e5251f8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483457123204059981, guid: d025be3779a893949a3ffd9e4e5251f8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483457123204059981, guid: d025be3779a893949a3ffd9e4e5251f8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.2779783
+      objectReference: {fileID: 0}
+    - target: {fileID: 4483457123204059981, guid: d025be3779a893949a3ffd9e4e5251f8, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5320953502706917031, guid: d025be3779a893949a3ffd9e4e5251f8, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 72a4f82588adb49f8a82a7d44348236d, type: 3}
+    - target: {fileID: 5320953502706917031, guid: d025be3779a893949a3ffd9e4e5251f8, type: 3}
+      propertyPath: m_Color.b
+      value: 0.72828406
+      objectReference: {fileID: 0}
+    - target: {fileID: 5320953502706917031, guid: d025be3779a893949a3ffd9e4e5251f8, type: 3}
+      propertyPath: m_Color.g
+      value: 0.9245283
+      objectReference: {fileID: 0}
+    - target: {fileID: 5320953502706917031, guid: d025be3779a893949a3ffd9e4e5251f8, type: 3}
+      propertyPath: m_Color.r
+      value: 0.77217394
       objectReference: {fileID: 0}
     - target: {fileID: 5320953502706917031, guid: d025be3779a893949a3ffd9e4e5251f8, type: 3}
       propertyPath: m_SortingOrder
