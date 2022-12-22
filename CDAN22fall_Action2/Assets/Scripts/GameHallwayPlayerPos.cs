@@ -16,9 +16,11 @@ public class GameHallwayPlayerPos : MonoBehaviour{
 	
     void Awake(){
         player = GameObject.FindWithTag("Player").transform;
-				Debug.Log("The recentRoom value is " + GameTracking.recentRoom);
+			Debug.Log("The recentRoom value is " + GameTracking.recentRoom);
 		
-		if (GameTracking.isHallway==true){
+		//player.position = hallwayPos3.position;
+		
+		//if (GameTracking.isHallway==true){
 			if (GameTracking.recentRoom == "room1"){
 				player.position = hallwayPos1.position;
 				Debug.Log("I put the player in p1");
@@ -31,7 +33,7 @@ public class GameHallwayPlayerPos : MonoBehaviour{
 				player.position = hallwayPos3.position;
 				Debug.Log("I put the player in p3");
 			}				
-		}
+		//}
     }
 
 	
