@@ -117,6 +117,12 @@ public class GameTracking : MonoBehaviour{
 			escapedRoom2 = true;
 			Debug.Log("I was in room 2: " + recentRoom);
 		} else {isRoom2 = false;}
+		
+		if (isThisShop){
+			isShop = true; 
+			recentRoom = "shop";
+			Debug.Log("I was in the shop: " + recentRoom);
+		} else {isRoom2 = false;}
 			
 		if (isThisRoom3){
 			isRoom3=true; 
