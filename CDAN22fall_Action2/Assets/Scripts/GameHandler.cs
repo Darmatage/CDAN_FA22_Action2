@@ -32,6 +32,10 @@ public class GameHandler : MonoBehaviour{
       public static bool hasFoundKey;
       public static bool hasFoundLadder;
 
+	public static bool gotitem1 = false;
+     public static bool gotitem2 = false;
+     public static bool gotitem3 = false;
+
       void Start(){
         if(canHealth==false){
           healthDisplay.SetActive(false);
@@ -118,6 +122,10 @@ public class GameHandler : MonoBehaviour{
       public void RestartGame() {
             SceneManager.LoadScene("MainMenu");
             playerHealth = StartPlayerHealth;
+			
+			GameTracking.escapedRoom1 = false;
+			GameTracking.escapedRoom3 = false;
+			GameTracking.escapedRoom5 = false;
       }
 
       public void QuitGame() {
@@ -131,7 +139,5 @@ public class GameHandler : MonoBehaviour{
       public void Credits() {
             SceneManager.LoadScene("Credits");
       }
-     public static bool gotitem1 = false;
-     public static bool gotitem2 = false;
-     public static bool gotitem3 = false;
+     
    }
