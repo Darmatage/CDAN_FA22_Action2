@@ -81,10 +81,10 @@ public class GameTracking : MonoBehaviour{
 	//public static bool escapedRoom7 = false;
 
 	//Shop Clue bools
-	public static bool gotClue1;
-	public static bool gotClue2;
-	public static bool gotClue3;
-	public static bool gotClue4;
+	public static bool gotClue1 = false;
+	public static bool gotClue2 = false;
+	public static bool gotClue3 = false;
+	public static bool gotClue4 = false;
 
 
 	//BIG TESTING VARIABLES

@@ -17309,6 +17309,10 @@ PrefabInstance:
       propertyPath: isThisRoom2
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4052624280264459770, guid: 5f422dcc7b6cd9842803a9ed7fb74f64, type: 3}
+      propertyPath: timer
+      value: 180
+      objectReference: {fileID: 0}
     - target: {fileID: 7142044627150404815, guid: 5f422dcc7b6cd9842803a9ed7fb74f64, type: 3}
       propertyPath: m_RootOrder
       value: 1

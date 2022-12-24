@@ -12,7 +12,7 @@ public class GameInventory : MonoBehaviour {
 	public bool InvIsOpen = false;
 	public bool canInventory = true;
 
-      //5 Inventory Items:
+      //7 Inventory Items:
 	public static bool item1bool = false; //key1(room1 bedroom)
 	public static bool item2bool = false; //chalk(room3 sibling)
 	public static bool item3bool = false; //candle(room3)
