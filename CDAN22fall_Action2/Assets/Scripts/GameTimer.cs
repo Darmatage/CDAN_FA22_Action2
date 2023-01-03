@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class GameTimer : MonoBehaviour {
-	public int timer = 240;
+	private int timer = 240;
 	private float theTimer = 0f;
 	public GameObject timerText;
 	public bool canTimer = true;

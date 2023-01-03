@@ -20,7 +20,7 @@ public class TopFloorExit : MonoBehaviour{
 	void Update(){
 
 		//if ((GameTracking.escapedRoom1)&&(GameTracking.escapedRoom2)&&(GameTracking.escapedRoom3)){
-		if ((GameTracking.escapedRoom1)&&(GameTracking.escapedRoom2)&&(GameTracking.escapedRoom3)){
+		if ((GameTracking.escapedRoom1)&&(GameTracking.escapedRoom3)){
 			finishedAllTopPuzzles = true;
 		}
 		

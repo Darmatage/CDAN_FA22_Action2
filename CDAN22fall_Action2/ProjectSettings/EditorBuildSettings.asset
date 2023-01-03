@@ -19,7 +19,7 @@ EditorBuildSettings:
     guid: 523c44b46493e43b281e72031a4505c6
   - enabled: 1
     path: Assets/Scenes/Level2Bathroom.unity
-    guid: b5cd67d534396a2429ef360d75f981b9
+    guid: 9e1abb71310ee4b1c96fa4bfe619f395
   - enabled: 1
     path: Assets/Scenes/Level3SiblingBedroom.unity
     guid: 3e3ffbe15a76d4b03815b33e9868d221

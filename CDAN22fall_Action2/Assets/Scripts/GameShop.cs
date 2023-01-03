@@ -13,18 +13,15 @@ public class GameShop : MonoBehaviour{
 	public GameObject shopItem1Button;
 	public GameObject shopItem2Button;
 	public GameObject shopItem3Button;
-	public GameObject shopItem4Button;
 	
 	public int item1cost = 5;
 	public int item2cost = 10;
-	public int item3cost = 15;
-	public int item4cost = 20;
+	public int item3cost = 20;
 	
 	
 	public GameObject clue1;
 	public GameObject clue2;
 	public GameObject clue3;
-	public GameObject clue4;
 	
 	//public AudioSource KaChingSFX;
 	
@@ -37,7 +34,6 @@ public class GameShop : MonoBehaviour{
 		clue1.SetActive(false);
 		clue2.SetActive(false);
 		clue3.SetActive(false);
-		clue4.SetActive(false);
 	}
 
 
@@ -65,15 +61,11 @@ public class GameShop : MonoBehaviour{
 			shopItem3Button.SetActive(true);
 		} else {shopItem3Button.SetActive(false);}
 		
-		if ((item4cost <= GameHandler.gotButtons)&&(GameTracking.gotClue4==false)){
-			shopItem4Button.SetActive(true);
-		} else {shopItem4Button.SetActive(false);}
 		
 		//set clue visibility:
 		if (GameTracking.gotClue1) {clue1.SetActive(true);} else {clue1.SetActive(false);}
 		if (GameTracking.gotClue2) {clue2.SetActive(true);} else {clue2.SetActive(false);}
 		if (GameTracking.gotClue3) {clue3.SetActive(true);} else {clue3.SetActive(false);}
-		if (GameTracking.gotClue4) {clue4.SetActive(true);} else {clue4.SetActive(false);}
 		
 		
 		//Cheat code:
@@ -93,21 +85,14 @@ public class GameShop : MonoBehaviour{
 	
 	public void BuyItem2(){
 		GameTracking.gotClue2 = true;
-		int spentButtons = (item2cost * -1);
+		int spentButtons = (item1cost * -1);
 		gameObject.GetComponent<GameHandler>().playerGetButtons(spentButtons);
 		//KaChingSFX.Play();
 	}
 	
 	public void BuyItem3(){
 		GameTracking.gotClue3 = true;
-		int spentButtons = (item3cost * -1);
-		gameObject.GetComponent<GameHandler>().playerGetButtons(spentButtons);
-		//KaChingSFX.Play();
-	}
-	
-	public void BuyItem4(){
-		GameTracking.gotClue4 = true;
-		int spentButtons = (item4cost * -1);
+		int spentButtons = (item1cost * -1);
 		gameObject.GetComponent<GameHandler>().playerGetButtons(spentButtons);
 		//KaChingSFX.Play();
 	}

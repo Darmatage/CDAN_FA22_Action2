@@ -81,10 +81,9 @@ public class GameTracking : MonoBehaviour{
 	//public static bool escapedRoom7 = false;
 
 	//Shop Clue bools
-	public static bool gotClue1 = false;
-	public static bool gotClue2 = false;
-	public static bool gotClue3 = false;
-	public static bool gotClue4 = false;
+	public static bool gotClue1;
+	public static bool gotClue2;
+	public static bool gotClue3;
 
 
 	//BIG TESTING VARIABLES
@@ -172,7 +171,6 @@ public class GameTracking : MonoBehaviour{
 			}
 		if (escapedRoom2){
 			haveIBeenInRm2 = true;
-			finalCode3.SetActive(true);  //final code 3
 		}else { 
 			haveIBeenInRm2 = false;
 		}
@@ -189,6 +187,7 @@ public class GameTracking : MonoBehaviour{
 		}
 		if (escapedRoom5){
 			haveIBeenInRm5 = true;
+			finalCode3.SetActive(true);  //final code 3
 			finalCode4.SetActive(true);  //final code 4
 		}else { 
 			haveIBeenInRm5=false;

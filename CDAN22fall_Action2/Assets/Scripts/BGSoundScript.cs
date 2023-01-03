@@ -10,7 +10,6 @@ public class BGSoundScript : MonoBehaviour {
 
 	public AudioSource mainMenu;
 	public AudioSource Room1;
-	public AudioSource Room2;
 	public AudioSource Room3;	
 	public AudioSource Room5;
 	public AudioSource Shop;
@@ -54,7 +53,6 @@ public class BGSoundScript : MonoBehaviour {
 				mainMenu.Play();
 			}
 			Room1.Stop();
-			Room2.Stop();
 			Room3.Stop();	
 			Room5.Stop();
 			Shop.Stop();
@@ -64,25 +62,13 @@ public class BGSoundScript : MonoBehaviour {
 			if (!Room1.isPlaying){
 				Room1.Play();
 			}
-			Room2.Stop();
 			Room3.Stop();	
 			Room5.Stop();
 			Shop.Stop();
 			currentSong = "Level1";
-		} else if (sceneName == "Level2Bathroom"){
+		} else if (sceneName == "Level3SiblingBedroom"){
 			mainMenu.Stop();
 			Room1.Stop();
-			if (!Room2.isPlaying){
-				Room2.Play();
-			}
-			Room3.Stop();
-			Room5.Stop();
-			Shop.Stop();
-			currentSong = "Level2";
-		}else if (sceneName == "Level3SiblingBedroom"){
-			mainMenu.Stop();
-			Room1.Stop();
-			Room2.Stop();
 			if (!Room3.isPlaying){
 				Room3.Play();
 			}
@@ -92,7 +78,6 @@ public class BGSoundScript : MonoBehaviour {
 		} else if (sceneName == "Level5LivingRoom"){
 			mainMenu.Stop();
 			Room1.Stop();
-			Room2.Stop();
 			Room3.Stop();
 			if (!Room5.isPlaying){			
 				Room5.Play();
@@ -102,7 +87,6 @@ public class BGSoundScript : MonoBehaviour {
 		} else if (sceneName == "HallwayShop"){
 			mainMenu.Stop();
 			Room1.Stop();
-			Room2.Stop();
 			Room3.Stop();	
 			Room5.Stop();
 			if (!Shop.isPlaying){

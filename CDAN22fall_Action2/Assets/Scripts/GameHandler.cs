@@ -33,8 +33,8 @@ public class GameHandler : MonoBehaviour{
       public static bool hasFoundLadder;
 
 	public static bool gotitem1 = false;
-	public static bool gotitem2 = false;
-	public static bool gotitem3 = false;
+     public static bool gotitem2 = false;
+     public static bool gotitem3 = false;
 
       void Start(){
         if(canHealth==false){
@@ -115,17 +115,20 @@ public class GameHandler : MonoBehaviour{
             SceneManager.LoadScene("LoseScreen");
       }
 
-	public void StartGame() {
-		ResetStats();
-		SceneManager.LoadScene("OpeningCutscene");
-	}
+      public void StartGame() {
+            SceneManager.LoadScene("OpeningCutscene");
+      }
 
-	public void RestartGame() {
-		ResetStats();
-		SceneManager.LoadScene("MainMenu");
-	}
+      public void RestartGame() {
+            SceneManager.LoadScene("MainMenu");
+            playerHealth = StartPlayerHealth;
 
-	public void QuitGame() {
+			GameTracking.escapedRoom1 = false;
+			GameTracking.escapedRoom3 = false;
+			GameTracking.escapedRoom5 = false;
+      }
+
+      public void QuitGame() {
                 #if UNITY_EDITOR
                 UnityEditor.EditorApplication.isPlaying = false;
                 #else
@@ -140,39 +143,5 @@ public class GameHandler : MonoBehaviour{
       public void Controls(){
         SceneManager.LoadScene("Controls");
       }
-	  
-	public void ResetStats(){
-		gotButtons = 0;
-		playerHealth = StartPlayerHealth;
-		GameTracking.escapedRoom1 = false;
-		GameTracking.escapedRoom2 = false;
-		GameTracking.escapedRoom3 = false;
-		GameTracking.escapedRoom5 = false;
-		GameTracking.finalCodeSolved = false;
-		GameTracking.recentRoom = "room1";
-		
-		GameTracking.gotClue1 = false;
-		GameTracking.gotClue2 = false;
-		GameTracking.gotClue3 = false;
-		GameTracking.gotClue4 = false;
-		
-		GameInventory.item1bool = false;
-		GameInventory.item2bool = false;
-		GameInventory.item3bool = false;
-		GameInventory.item4bool = false;
-		GameInventory.item5bool = false;
-		GameInventory.item6bool = false;
-		GameInventory.item7bool = false;
-		
-		GameInventory.item1num = 0;
-		GameInventory.item2num = 0;
-		GameInventory.item3num = 0;
-		GameInventory.item4num = 0;
-		GameInventory.item5num = 0;
-		GameInventory.item6num = 0;
-		GameInventory.item7num = 0;
-		
-	  }
-	  
 
    }
