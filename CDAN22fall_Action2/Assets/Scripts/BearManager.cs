@@ -92,7 +92,8 @@ public class BearManager : MonoBehaviour
 		bearAttack.SetActive(false);
 		bearPure.SetActive(true);
 			  
-		Instantiate (lootDrop, transform.position, Quaternion.identity);
+		GameObject ladder = Instantiate (lootDrop, transform.position, Quaternion.identity);
+		ladder.SetActive(true);
 		
 			yield return new WaitForSeconds(2.5f);
 		Destroy(pSys);

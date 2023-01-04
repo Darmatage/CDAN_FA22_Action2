@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class MirrorPuzzle_Moveable : MonoBehaviour{
 
-	public Transform end1;
-	public Transform end2;
+	//public Transform end1;
+	//public Transform end2;
 	public int objectID = 1;
 
 

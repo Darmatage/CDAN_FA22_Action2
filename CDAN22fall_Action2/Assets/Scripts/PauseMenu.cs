@@ -26,8 +26,11 @@ public class PauseMenu : MonoBehaviour {
         }
 
         void Start (){
-                pauseMenuUI.SetActive(false);
-                GameisPaused = false;
+			GameisPaused = false;
+			
+			if (GameisPaused){
+                pauseMenuUI.SetActive(true);
+			} else {pauseMenuUI.SetActive(false);}
         }
 
         void Update (){
@@ -41,7 +44,17 @@ public class PauseMenu : MonoBehaviour {
                 }
         }
 
-        void Pause(){
+		public void PauseButton(){
+			if (GameisPaused){
+				Resume();
+			}
+			else{
+				Pause();
+			}
+        }
+
+
+        public void Pause(){
                 pauseMenuUI.SetActive(true);
                 Time.timeScale = 0f;
                 GameisPaused = true;

@@ -354,7 +354,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2133964961124914670, guid: 224279b9790e65c42815c0ef250f1f50, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 2133964961124914670, guid: 224279b9790e65c42815c0ef250f1f50, type: 3}
       propertyPath: m_AnchorMax.x
@@ -7205,7 +7205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2133964961124914670, guid: 224279b9790e65c42815c0ef250f1f50, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 2133964961124914670, guid: 224279b9790e65c42815c0ef250f1f50, type: 3}
       propertyPath: m_AnchorMax.x
@@ -12153,7 +12153,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2133964961124914670, guid: 224279b9790e65c42815c0ef250f1f50, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2133964961124914670, guid: 224279b9790e65c42815c0ef250f1f50, type: 3}
       propertyPath: m_AnchorMax.x
@@ -12304,15 +12304,39 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 753942503665939315, guid: 5f422dcc7b6cd9842803a9ed7fb74f64, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 979567101502631771, guid: 5f422dcc7b6cd9842803a9ed7fb74f64, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 296
       objectReference: {fileID: 0}
+    - target: {fileID: 1988583408791658058, guid: 5f422dcc7b6cd9842803a9ed7fb74f64, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988583408791658058, guid: 5f422dcc7b6cd9842803a9ed7fb74f64, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988583408791658058, guid: 5f422dcc7b6cd9842803a9ed7fb74f64, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988583408839275936, guid: 5f422dcc7b6cd9842803a9ed7fb74f64, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988583408839275936, guid: 5f422dcc7b6cd9842803a9ed7fb74f64, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988583410385351080, guid: 5f422dcc7b6cd9842803a9ed7fb74f64, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
     - target: {fileID: 2144230050277863819, guid: 5f422dcc7b6cd9842803a9ed7fb74f64, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2350111653304504414, guid: 5f422dcc7b6cd9842803a9ed7fb74f64, type: 3}
       propertyPath: isThisShop
@@ -12346,6 +12370,10 @@ PrefabInstance:
       propertyPath: buttonOpenInventory
       value: 
       objectReference: {fileID: 2069812212}
+    - target: {fileID: 3105977673668221781, guid: 5f422dcc7b6cd9842803a9ed7fb74f64, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 3114260610741903832, guid: 5f422dcc7b6cd9842803a9ed7fb74f64, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -12572,7 +12600,7 @@ PrefabInstance:
       objectReference: {fileID: 12800000, guid: 4efb9edfee5aa4d5db820e5a0d21fe11, type: 3}
     - target: {fileID: 5894899180624537497, guid: 5f422dcc7b6cd9842803a9ed7fb74f64, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6821361060336542774, guid: 5f422dcc7b6cd9842803a9ed7fb74f64, type: 3}
       propertyPath: canButton
@@ -15035,7 +15063,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 100
+  m_SortingOrder: 95
   m_Sprite: {fileID: -1519893602, guid: f75d40b07934b0f4c97fa08c7e5b2505, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -15212,7 +15240,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2133964961124914670, guid: 224279b9790e65c42815c0ef250f1f50, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2133964961124914670, guid: 224279b9790e65c42815c0ef250f1f50, type: 3}
       propertyPath: m_AnchorMax.x

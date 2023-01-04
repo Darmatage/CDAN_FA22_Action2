@@ -66,7 +66,8 @@ public class ChestManager : MonoBehaviour{
 			noKeyText.SetActive(false);
 			hasKeyText.SetActive(false);
 			//drop the loot
-			Instantiate (chestLoot, (transform.position + shiftLoot), Quaternion.identity);
+		GameObject ladder = Instantiate (chestLoot, (transform.position + shiftLoot), Quaternion.identity);	
+		ladder.SetActive(true);
             GetComponent<Collider2D>().enabled = false;
 
 // room 1

@@ -45,6 +45,7 @@ public class BGSoundScript : MonoBehaviour {
 		sceneName = SceneManager.GetActiveScene().name;
 		if ((sceneName == "MainMenu") || 
 			(sceneName == "Credits") || 
+			(sceneName == "Controls") ||
 			(sceneName == "WinScreen") || 
 			(sceneName == "LoseScreen") || 
 			(sceneName == "TopFloorHallway") || 

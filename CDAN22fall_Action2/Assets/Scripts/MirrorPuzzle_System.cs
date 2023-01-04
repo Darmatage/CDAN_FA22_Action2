@@ -95,7 +95,8 @@ public class MirrorPuzzle_System : MonoBehaviour{
 	public void SolvedPuzzle(){
 		toilet.GetComponent<CircleCollider2D>().enabled = false;
 		flush.Play(); Debug.Log("I think I played flush sound");
-		Instantiate (lootDrop, toilet.transform.position, Quaternion.identity);
+		GameObject ladder = Instantiate (lootDrop, toilet.transform.position, Quaternion.identity);
+		ladder.SetActive(true);
 	}
 
 }
