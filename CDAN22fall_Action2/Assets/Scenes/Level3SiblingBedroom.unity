@@ -37368,6 +37368,10 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: f7a4e030e9961bd468e4775e4d2d0beb, type: 3}
+    - target: {fileID: 4052624280264459770, guid: 5f422dcc7b6cd9842803a9ed7fb74f64, type: 3}
+      propertyPath: timer
+      value: 120
+      objectReference: {fileID: 0}
     - target: {fileID: 4346038859945834335, guid: 5f422dcc7b6cd9842803a9ed7fb74f64, type: 3}
       propertyPath: m_SizeDelta.x
       value: 120
